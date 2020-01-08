@@ -15,6 +15,7 @@
 //////////////////////////////////////////////////////////////////////////////
 package com.evolutionary.operator.replacement;
 
+import com.evolutionary.Genetic;
 import com.evolutionary.population.Population;
 import com.evolutionary.problem.Individual;
 import java.util.ArrayList;
@@ -27,7 +28,7 @@ import java.util.List;
  *
  * @author zulu - computer
  */
-public class ClearingMultiset extends Replacement {
+public class ClearingReplace extends Replacement {
 
     @Override
     public Population execute(Population parents, Population offspring) {
@@ -80,6 +81,31 @@ public class ClearingMultiset extends Replacement {
         }
         //remove most similar
         pop.remove(similar);
+    }
+
+    @Override
+    public String getInformation() {
+        StringBuilder txt = new StringBuilder(Genetic.getFullName(this));
+
+        txt.append("\nReplaces a generation using Clearing \n");
+        txt.append("\n");
+        txt.append("\n//join pupulations, Shuffle and sort by descending order");        
+        txt.append("\nallPop =  parents + offspring");
+        txt.append("\nallPop.shuffle()");
+        txt.append("\nallPop.sortDescending()");
+        txt.append("\n");
+        txt.append("\nnewPop = empty population");
+        txt.append("\n");
+        txt.append("\n//selecet  parents.size genotypes");        
+        txt.append("\nWhile newPop.size < parents.size ");
+        txt.append("\n    winner = allPop.removeFirst()");
+        txt.append("\n    if newPop.size + allPop.size > parent.size");
+        txt.append("\n        looser =  allPop.mostSimilar(winner)");
+        txt.append("\n    newPop.add(winner)");
+        txt.append("\n");
+        txt.append("\nreturn newPop");
+
+        return txt.toString();
     }
 
     //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::

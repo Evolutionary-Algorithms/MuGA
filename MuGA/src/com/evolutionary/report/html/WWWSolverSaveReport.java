@@ -102,6 +102,8 @@ public class WWWSolverSaveReport {
         try {
             if (report.solver instanceof EAsolverArray) {
                 WWWSolverSaveReportArray.save(report, fileName, window);
+                //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
             } else {
                 new WWWSolverSaveReport(report).save(fileName, window);
             }
@@ -143,7 +145,7 @@ public class WWWSolverSaveReport {
         statsHtml.append("</tr>");
 
         //Stats data 
-        for (int i = report.evolution.size() - 1; i >= 0; i--) {
+        for (int i = 0; i < report.evolution.size(); i++) {
             statsHtml.append("\n<tr align=\"center\">");
             statsCSV.append("\n");
             Double[] v = report.evolution.get(i);
@@ -221,7 +223,8 @@ public class WWWSolverSaveReport {
     static String savePopulation(ReportSolver report, Population pop, String menuItemName, String template, String target) throws Exception {
         return savePopulation(report.path, report.solver.getSolverName(), pop, menuItemName, template, target);
     }
-    static String savePopulation(String reportPath,String solverName, Population pop, String menuItemName, String template, String target) throws Exception {
+
+    static String savePopulation(String reportPath, String solverName, Population pop, String menuItemName, String template, String target) throws Exception {
         File path = new File(reportPath);
 
         StringBuilder solverMenu = new StringBuilder();
@@ -389,9 +392,9 @@ public class WWWSolverSaveReport {
         EAExperiment.saveEvolutionSolver(report.solver);
         MyFile.saveToFile(report.solver.toString()
                 + "\n\n" + report.getEvolutionString()
-                + "\n\n" +
-                HTMLutils.getCopyright(),
-                 path + configFileName);
+                + "\n\n"
+                + HTMLutils.getCopyright(),
+                path + configFileName);
 
         config = config.replace("_TITLE_", HTMLutils.getPageTitle("Configuration of solver " + solverName, configFileName, zipName));
 
@@ -452,8 +455,8 @@ public class WWWSolverSaveReport {
                 //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
                 //::::::::::::::::::::::::::::  E N D !:::::::::::::::::::::::::
                 //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-                path = new File(path.getAbsolutePath() + "/index.html");
-                java.awt.Desktop.getDesktop().browse(path.toURI());
+                //path = new File(path.getAbsolutePath() + "/index.html");
+                //java.awt.Desktop.getDesktop().browse(path.toURI());
 
             } catch (Exception ex) {
                 ex.printStackTrace();
@@ -538,6 +541,8 @@ public class WWWSolverSaveReport {
             SaveReportTask task = new SaveReportTask(null);
             task.doInBackground();
         }
+        File path = new File(report.path + "/index.html");
+        java.awt.Desktop.getDesktop().browse(path.toURI());
 
     }
 

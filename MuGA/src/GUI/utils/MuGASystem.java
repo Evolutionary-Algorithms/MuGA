@@ -37,7 +37,7 @@ public class MuGASystem {
     public static String mugaPath = "";
     public static String name = "MuGA - Multiset Genetic Algorithm";
     public static String version = "Thesis";
-    public static String copyright = "(c)M@nso 2019";
+    public static String copyright = "(c)M@nso 2020";
     
 
     public static String SOLVER = "com.evolutionary.solver";

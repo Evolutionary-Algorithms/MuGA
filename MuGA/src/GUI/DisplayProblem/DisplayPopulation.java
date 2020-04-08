@@ -13,7 +13,6 @@
 //::                                                             (c) 2019    ::
 //:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 //////////////////////////////////////////////////////////////////////////////
-
 package GUI.DisplayProblem;
 
 import GUI.utils.MuGASystem;
@@ -50,9 +49,9 @@ public abstract class DisplayPopulation extends JPanel {
         setDoubleBuffered(true);
     }
 
-    public void setSolver(EAsolver solver) {
+    public void setSolver(EAsolver solver, Population pop) {
         this.solver = solver;
-        setPopulation(solver.parents);
+        setPopulation(pop);
     }
 
     public void setPopulation(Population pop) {
@@ -73,7 +72,7 @@ public abstract class DisplayPopulation extends JPanel {
 //            if (solver instanceof Islands) {
 //                GraphicsRIGA.showPopulation((Islands) solver, this, gr, bounds);
 //            } else {
-                display(pop, gr, bounds);
+            display(pop, gr, bounds);
 //            }
 
         } catch (Exception e) {
@@ -93,7 +92,6 @@ public abstract class DisplayPopulation extends JPanel {
         double dimY = (double) bounds.height / (pop.getPopulationSize() + 0);
         bounds.y += dimY / 8;
         int i = 0;
-        int yPosition = 0;
         for (Individual ind : individuals) {
             displayIndividual(gr, ind,
                     bounds.x,
@@ -155,14 +153,14 @@ public abstract class DisplayPopulation extends JPanel {
         gr.setFont(new java.awt.Font("Courier new", Font.BOLD, 20));
         gr.setColor(new Color(0.1f, 0.1f, 0.1f, 0.750f));
         gr.fillRoundRect(px, py, 230, 120, 20, 20);
-        gr.setColor(Color.WHITE);        
+        gr.setColor(Color.WHITE);
         gr.drawString("Gener.: " + NumberFormat.getNumberInstance(Locale.UK).format(solver.numGeneration), px + 10, py + 20);
         gr.drawString("Evals.: " + NumberFormat.getNumberInstance(Locale.UK).format(solver.numEvaluations), px + 10, py + 50);
         //gr.drawString("Best " + solver.hallOfFame.iterator().next().getFitness(), 40, py - 30);
-       String val =  MyNumber.numberToString(solver.hallOfFame.iterator().next().getFitness(), 10);
+        String val = MyNumber.numberToString(solver.hallOfFame.iterator().next().getFitness(), 10);
         gr.drawString("Best  : " + String.format("%s", val.trim()), px + 10, py + 80);
         gr.setFont(new java.awt.Font("Courier new", Font.BOLD, 12));
-         gr.setColor(Color.BLACK);
+        gr.setColor(Color.BLACK);
         gr.drawString(MuGASystem.copyright, px + 135 + 2, py + 110 + 2);
         gr.setColor(Color.LIGHT_GRAY);
         gr.drawString(MuGASystem.copyright, px + 135, py + 110);
@@ -204,7 +202,7 @@ public abstract class DisplayPopulation extends JPanel {
         gr.fillRoundRect(x1, y1, sizex, sizey, sizex / round, sizex / round);
     }
 
-    public void drawBestBit(boolean bit, Graphics gr, int x1, int y1, int sizex, int sizey) {        
+    public void drawBestBit(boolean bit, Graphics gr, int x1, int y1, int sizex, int sizey) {
         drawBlock(gr, getBestColor(bit), x1, y1, sizex, sizey);
     }
 
@@ -215,8 +213,8 @@ public abstract class DisplayPopulation extends JPanel {
     public String toString() {
         return getClass().getSimpleName();
     }
-    
-     public void drawBlock(Graphics gr, Color color,int x1, int y1, int sizex, int sizey) {
+
+    public void drawBlock(Graphics gr, Color color, int x1, int y1, int sizex, int sizey) {
         gr.setColor(color);
         gr.fillOval(x1, y1, sizex, sizey);
         gr.setColor(Color.BLACK);

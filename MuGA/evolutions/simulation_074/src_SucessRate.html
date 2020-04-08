@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<!--
+MUGA
+-->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <style> 
+            H1, H2 {
+                color: green;
+                font-family: Verdana, Helvetica, Arial, sans-serif;
+            }
+        </style>
+        <title>SucessRate.java</title>
+        <link href='http://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.css' rel='stylesheet' type='text/css'/>        
+
+    </head>
+    <body>
+        <script src='http://cdnjs.cloudflare.com/ajax/libs/prettify/r298/run_prettify.js'></script>
+        <h1>SucessRate.java</h1>
+        <pre  class="prettyprint" id="java">
+<!-------------------MUGA SOURCE CODE (c) M@nso  -->
+//::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: 
+//::     Antonio Manso                        Luis Correia                   ::
+//::     manso@ipt.pt                   Luis.Correia@ciencias.ulisboa.pt     ::
+//::                                                                         ::
+//::     Biosystems & Integrative Sciences Institute                         ::
+//::     Faculty of Sciences University of Lisboa                            ::
+//::                                                                         ::
+//::     Instituto Politécnico de Tomar                                      ::
+//::     Escola Superior de Tecnologia de Tomar                              ::
+//::                                                                         ::
+//::     This software was build with the purpose of investigate and         ::
+//::     learning.                                                           ::
+//::                                                             (c) 2019    ::
+//:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+//////////////////////////////////////////////////////////////////////////////
+
+package com.evolutionary.report.statistics;
+
+import com.evolutionary.solver.EAsolver;
+
+/**
+ * Created on 15/mar/2016, 16:24:09
+ *
+ * @author zulu - computer
+ */
+public class SucessRate extends AbstractStatistics {
+
+    public SucessRate() {
+        super("Sucess Rate");
+        higherIsBetter = true;
+    }
+
+    /**
+     * calculate the statistic
+     *
+     * @param s solver
+     * @return value
+     */
+    public double execute(EAsolver s) {
+        return s.hallOfFame.iterator().next().isOptimum() ? 1 : 0;
+    }
+
+    @Override
+    public String getInformation() {
+        return "Sucess Rate"
+                + "\nverify if the evolution found optimal value";
+    }
+    
+    
+
+    //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+    private static final long serialVersionUID = 201603151624L;
+    //:::::::::::::::::::::::::::  Copyright(c) M@nso  2016  :::::::::::::::::::
+    ///////////////////////////////////////////////////////////////////////////
+}
+
+<!-------------------MUGA SOURCE CODE (c) M@nso  -->       
+        </pre>
+
+        <font face="verdana" color=#C8C8C8 size=2>
+        <hr>MuGA - Multiset Genetic Algorithm - Thesis (c)M@nso 2019  2020/01/14 18:48         
+    </body>
+</html>
+

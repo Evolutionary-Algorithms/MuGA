@@ -19,9 +19,7 @@ import com.evolutionary.solverUtils.FileSolver;
 import com.evolutionary.Genetic;
 import com.evolutionary.operator.GeneticOperator;
 import com.evolutionary.operator.mutation.DefaultMutation;
-import com.evolutionary.operator.mutation.real.Gauss;
 import com.evolutionary.operator.recombination.DefaultRecombination;
-import com.evolutionary.operator.recombination.real.AX;
 import com.evolutionary.operator.replacement.Gerational;
 
 import com.evolutionary.operator.rescaling.AdaptiveCeiling;
@@ -32,7 +30,7 @@ import com.evolutionary.population.MultiPopulation;
 import com.evolutionary.population.Population;
 import com.evolutionary.problem.Individual;
 import com.evolutionary.problem.bits.OneMax;
-import com.evolutionary.problem.real.CEC2008.F01_Sphere;
+import com.evolutionary.problem.real.multimodal.MultiModalFunc;
 
 import com.evolutionary.report.ReportSolver;
 import com.evolutionary.report.statistics.AbstractStatistics;
@@ -53,6 +51,7 @@ import java.util.List;
 import java.util.Random;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
 
 /**
  * Created on 3/out/2015, 12:39:44
@@ -155,6 +154,7 @@ public abstract class EAsolver extends Genetic {
         } else {
             random.setSeed(randomSeed); // initialization by seed
         }
+        random = new Random(randomSeed);
         if (verbose) {
             System.out.println("Random seed " + seed);
         }
@@ -187,22 +187,22 @@ public abstract class EAsolver extends Genetic {
     public final void updateSolverAtributes() {
         //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
         //reload objects - useful to update old objects saved in file       
-        problem = problem.getClone();        
+        problem = problem.getClone();
         selection = selection.getClone();
         recombination = recombination.getClone();
         mutation = mutation.getClone();
         replacement = replacement.getClone();
         rescaling = rescaling.getClone();
         //reload stats
-        ArrayList<AbstractStatistics> lststat= new ArrayList<>();
+        ArrayList<AbstractStatistics> lststat = new ArrayList<>();
         for (AbstractStatistics stat : report.stats) {
             lststat.add(stat.getClone());
         }
-        report.stats=lststat;
+        report.stats = lststat;
         //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-        
+
         problem.setSolver(this);
-        
+
         parents.setRandomGenerator(this.random);
         selection.setSolver(this);
         recombination.setSolver(this);
@@ -219,6 +219,16 @@ public abstract class EAsolver extends Genetic {
     }
 
     public void updateHallOfFame(Population pop) {
+        if (problem instanceof MultiModalFunc) {
+            MultiModalFunc multiModal = (MultiModalFunc) problem;
+            List<Individual> allIndividuals = parents.getGenomes();
+            allIndividuals.addAll(hallOfFame);
+            hallOfFame = multiModal.getPeeks(allIndividuals);
+            if (!hallOfFame.isEmpty()) {
+                return;
+            }
+        }
+
         if (hallOfFame.isEmpty()) {
             Collection<Individual> best = pop.getAllBest();
             for (Individual individual : best) {
@@ -379,6 +389,6 @@ public abstract class EAsolver extends Genetic {
         ObjectInputStream in = new ObjectInputStream(new BufferedInputStream(new FileInputStream(fileName)));
         return (EAsolver) in.readObject();
     }
-    
-    public static int MAX_HALL_OF_FAME = 1000; // maximum individuals in hall of Fame
+
+    public static int MAX_HALL_OF_FAME = 500; // maximum individuals in hall of Fame
 }

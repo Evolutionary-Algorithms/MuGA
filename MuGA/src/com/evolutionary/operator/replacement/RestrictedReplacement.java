@@ -23,8 +23,6 @@ package com.evolutionary.operator.replacement;
 import com.evolutionary.Genetic;
 import com.evolutionary.population.Population;
 import com.evolutionary.problem.Individual;
-import com.evolutionary.solver.EAsolver;
-import com.evolutionary.solver.GA;
 import com.evolutionary.solver.RTS;
 import java.util.List;
 
@@ -82,6 +80,5 @@ public class RestrictedReplacement extends Replacement {
     private static final long serialVersionUID = 201604050955L;
     //:::::::::::::::::::::::::::  Copyright(c) M@nso  2016  :::::::::::::::::::
     ///////////////////////////////////////////////////////////////////////////
-
 
 }

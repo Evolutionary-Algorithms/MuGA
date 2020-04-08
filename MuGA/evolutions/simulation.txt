@@ -1,0 +1,714 @@
+AVG                            Generation          Individuals           SucessRate                 Time        FunctionCalls
+MuGA-64                               100               120.33                    1             31843.31              9973.98
+SGA-64                                100                   64                    1             31380.53             11113.95
+SGA-128                               100                  128                    1             31175.44             11114.41
+
+#::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+STD                            Generation          Individuals           SucessRate                 Time        FunctionCalls
+MuGA-64                                 0   4.4586880346016615                    0   162.16948952662818    93.00895796974082
+SGA-64                                  0                    0                    0    282.0986092726661    40.70821896016935
+SGA-128                                 0                    0                    0   143.82419964677098    43.47647570122645
+
+#::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+#::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+                                   GENERATION                                    
+#::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Generation                        MuGA-64               SGA-64              SGA-128 
+                Mean                  100                  100                  100 
+                 Std                    0                    0                    0 
+             Minimum                  100                  100                  100 
+              Median                  100                  100                  100 
+             Maximum                  100                  100                  100 
+
+            Solver 0                  100                  100                  100 
+            Solver 1                  100                  100                  100 
+            Solver 2                  100                  100                  100 
+            Solver 3                  100                  100                  100 
+            Solver 4                  100                  100                  100 
+            Solver 5                  100                  100                  100 
+            Solver 6                  100                  100                  100 
+            Solver 7                  100                  100                  100 
+            Solver 8                  100                  100                  100 
+            Solver 9                  100                  100                  100 
+           Solver 10                  100                  100                  100 
+           Solver 11                  100                  100                  100 
+           Solver 12                  100                  100                  100 
+           Solver 13                  100                  100                  100 
+           Solver 14                  100                  100                  100 
+           Solver 15                  100                  100                  100 
+           Solver 16                  100                  100                  100 
+           Solver 17                  100                  100                  100 
+           Solver 18                  100                  100                  100 
+           Solver 19                  100                  100                  100 
+           Solver 20                  100                  100                  100 
+           Solver 21                  100                  100                  100 
+           Solver 22                  100                  100                  100 
+           Solver 23                  100                  100                  100 
+           Solver 24                  100                  100                  100 
+           Solver 25                  100                  100                  100 
+           Solver 26                  100                  100                  100 
+           Solver 27                  100                  100                  100 
+           Solver 28                  100                  100                  100 
+           Solver 29                  100                  100                  100 
+           Solver 30                  100                  100                  100 
+           Solver 31                  100                  100                  100 
+           Solver 32                  100                  100                  100 
+           Solver 33                  100                  100                  100 
+           Solver 34                  100                  100                  100 
+           Solver 35                  100                  100                  100 
+           Solver 36                  100                  100                  100 
+           Solver 37                  100                  100                  100 
+           Solver 38                  100                  100                  100 
+           Solver 39                  100                  100                  100 
+           Solver 40                  100                  100                  100 
+           Solver 41                  100                  100                  100 
+           Solver 42                  100                  100                  100 
+           Solver 43                  100                  100                  100 
+           Solver 44                  100                  100                  100 
+           Solver 45                  100                  100                  100 
+           Solver 46                  100                  100                  100 
+           Solver 47                  100                  100                  100 
+           Solver 48                  100                  100                  100 
+           Solver 49                  100                  100                  100 
+           Solver 50                  100                  100                  100 
+           Solver 51                  100                  100                  100 
+           Solver 52                  100                  100                  100 
+           Solver 53                  100                  100                  100 
+           Solver 54                  100                  100                  100 
+           Solver 55                  100                  100                  100 
+           Solver 56                  100                  100                  100 
+           Solver 57                  100                  100                  100 
+           Solver 58                  100                  100                  100 
+           Solver 59                  100                  100                  100 
+           Solver 60                  100                  100                  100 
+           Solver 61                  100                  100                  100 
+           Solver 62                  100                  100                  100 
+           Solver 63                  100                  100                  100 
+           Solver 64                  100                  100                  100 
+           Solver 65                  100                  100                  100 
+           Solver 66                  100                  100                  100 
+           Solver 67                  100                  100                  100 
+           Solver 68                  100                  100                  100 
+           Solver 69                  100                  100                  100 
+           Solver 70                  100                  100                  100 
+           Solver 71                  100                  100                  100 
+           Solver 72                  100                  100                  100 
+           Solver 73                  100                  100                  100 
+           Solver 74                  100                  100                  100 
+           Solver 75                  100                  100                  100 
+           Solver 76                  100                  100                  100 
+           Solver 77                  100                  100                  100 
+           Solver 78                  100                  100                  100 
+           Solver 79                  100                  100                  100 
+           Solver 80                  100                  100                  100 
+           Solver 81                  100                  100                  100 
+           Solver 82                  100                  100                  100 
+           Solver 83                  100                  100                  100 
+           Solver 84                  100                  100                  100 
+           Solver 85                  100                  100                  100 
+           Solver 86                  100                  100                  100 
+           Solver 87                  100                  100                  100 
+           Solver 88                  100                  100                  100 
+           Solver 89                  100                  100                  100 
+           Solver 90                  100                  100                  100 
+           Solver 91                  100                  100                  100 
+           Solver 92                  100                  100                  100 
+           Solver 93                  100                  100                  100 
+           Solver 94                  100                  100                  100 
+           Solver 95                  100                  100                  100 
+           Solver 96                  100                  100                  100 
+           Solver 97                  100                  100                  100 
+           Solver 98                  100                  100                  100 
+           Solver 99                  100                  100                  100 
+
+Generation                           Mean                  STD             Solver 0             Solver 1             Solver 2             Solver 3             Solver 4             Solver 5             Solver 6             Solver 7             Solver 8             Solver 9            Solver 10            Solver 11            Solver 12            Solver 13            Solver 14            Solver 15            Solver 16            Solver 17            Solver 18            Solver 19            Solver 20            Solver 21            Solver 22            Solver 23            Solver 24            Solver 25            Solver 26            Solver 27            Solver 28            Solver 29            Solver 30            Solver 31            Solver 32            Solver 33            Solver 34            Solver 35            Solver 36            Solver 37            Solver 38            Solver 39            Solver 40            Solver 41            Solver 42            Solver 43            Solver 44            Solver 45            Solver 46            Solver 47            Solver 48            Solver 49            Solver 50            Solver 51            Solver 52            Solver 53            Solver 54            Solver 55            Solver 56            Solver 57            Solver 58            Solver 59            Solver 60            Solver 61            Solver 62            Solver 63            Solver 64            Solver 65            Solver 66            Solver 67            Solver 68            Solver 69            Solver 70            Solver 71            Solver 72            Solver 73            Solver 74            Solver 75            Solver 76            Solver 77            Solver 78            Solver 79            Solver 80            Solver 81            Solver 82            Solver 83            Solver 84            Solver 85            Solver 86            Solver 87            Solver 88            Solver 89            Solver 90            Solver 91            Solver 92            Solver 93            Solver 94            Solver 95            Solver 96            Solver 97            Solver 98            Solver 99
+             MuGA-64                  100                    0                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100
+              SGA-64                  100                    0                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100
+             SGA-128                  100                    0                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100                  100
+
+
+Generation : Compare Means  using Student's t-test
+   Confidence 95%      0    1    2  Score Rank     Confidence 99%      0    1    2  Score Rank        p-Values          0      1      2  
+             MuGA-64   .    .    .    0     1                MuGA-64   .    .    .    0     1                MuGA-64    NaN    NaN    NaN
+              SGA-64   .    .    .    0     1                 SGA-64   .    .    .    0     1                 SGA-64    NaN    NaN    NaN
+             SGA-128   .    .    .    0     1                SGA-128   .    .    .    0     1                SGA-128    NaN    NaN    NaN
+
+
+#::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+                                   INDIVIDUALS                                   
+#::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Individuals                       MuGA-64               SGA-64              SGA-128 
+                Mean               120.33                   64                  128 
+                 Std   4.4586880346016615                    0                    0 
+             Minimum                  107                   64                  128 
+              Median                  121                   64                  128 
+             Maximum                  129                   64                  128 
+
+            Solver 0                  120                   64                  128 
+            Solver 1                  125                   64                  128 
+            Solver 2                  127                   64                  128 
+            Solver 3                  115                   64                  128 
+            Solver 4                  114                   64                  128 
+            Solver 5                  110                   64                  128 
+            Solver 6                  116                   64                  128 
+            Solver 7                  117                   64                  128 
+            Solver 8                  119                   64                  128 
+            Solver 9                  119                   64                  128 
+           Solver 10                  123                   64                  128 
+           Solver 11                  126                   64                  128 
+           Solver 12                  126                   64                  128 
+           Solver 13                  121                   64                  128 
+           Solver 14                  121                   64                  128 
+           Solver 15                  128                   64                  128 
+           Solver 16                  120                   64                  128 
+           Solver 17                  117                   64                  128 
+           Solver 18                  119                   64                  128 
+           Solver 19                  121                   64                  128 
+           Solver 20                  120                   64                  128 
+           Solver 21                  119                   64                  128 
+           Solver 22                  121                   64                  128 
+           Solver 23                  119                   64                  128 
+           Solver 24                  114                   64                  128 
+           Solver 25                  119                   64                  128 
+           Solver 26                  122                   64                  128 
+           Solver 27                  123                   64                  128 
+           Solver 28                  129                   64                  128 
+           Solver 29                  121                   64                  128 
+           Solver 30                  121                   64                  128 
+           Solver 31                  126                   64                  128 
+           Solver 32                  116                   64                  128 
+           Solver 33                  108                   64                  128 
+           Solver 34                  124                   64                  128 
+           Solver 35                  126                   64                  128 
+           Solver 36                  117                   64                  128 
+           Solver 37                  112                   64                  128 
+           Solver 38                  115                   64                  128 
+           Solver 39                  120                   64                  128 
+           Solver 40                  120                   64                  128 
+           Solver 41                  119                   64                  128 
+           Solver 42                  122                   64                  128 
+           Solver 43                  119                   64                  128 
+           Solver 44                  122                   64                  128 
+           Solver 45                  117                   64                  128 
+           Solver 46                  118                   64                  128 
+           Solver 47                  109                   64                  128 
+           Solver 48                  122                   64                  128 
+           Solver 49                  122                   64                  128 
+           Solver 50                  127                   64                  128 
+           Solver 51                  127                   64                  128 
+           Solver 52                  123                   64                  128 
+           Solver 53                  121                   64                  128 
+           Solver 54                  124                   64                  128 
+           Solver 55                  122                   64                  128 
+           Solver 56                  124                   64                  128 
+           Solver 57                  121                   64                  128 
+           Solver 58                  119                   64                  128 
+           Solver 59                  125                   64                  128 
+           Solver 60                  122                   64                  128 
+           Solver 61                  128                   64                  128 
+           Solver 62                  124                   64                  128 
+           Solver 63                  117                   64                  128 
+           Solver 64                  120                   64                  128 
+           Solver 65                  124                   64                  128 
+           Solver 66                  122                   64                  128 
+           Solver 67                  123                   64                  128 
+           Solver 68                  113                   64                  128 
+           Solver 69                  115                   64                  128 
+           Solver 70                  126                   64                  128 
+           Solver 71                  121                   64                  128 
+           Solver 72                  120                   64                  128 
+           Solver 73                  117                   64                  128 
+           Solver 74                  125                   64                  128 
+           Solver 75                  119                   64                  128 
+           Solver 76                  117                   64                  128 
+           Solver 77                  123                   64                  128 
+           Solver 78                  121                   64                  128 
+           Solver 79                  125                   64                  128 
+           Solver 80                  122                   64                  128 
+           Solver 81                  125                   64                  128 
+           Solver 82                  107                   64                  128 
+           Solver 83                  121                   64                  128 
+           Solver 84                  117                   64                  128 
+           Solver 85                  122                   64                  128 
+           Solver 86                  116                   64                  128 
+           Solver 87                  126                   64                  128 
+           Solver 88                  121                   64                  128 
+           Solver 89                  120                   64                  128 
+           Solver 90                  121                   64                  128 
+           Solver 91                  124                   64                  128 
+           Solver 92                  117                   64                  128 
+           Solver 93                  115                   64                  128 
+           Solver 94                  124                   64                  128 
+           Solver 95                  124                   64                  128 
+           Solver 96                  123                   64                  128 
+           Solver 97                  113                   64                  128 
+           Solver 98                  114                   64                  128 
+           Solver 99                  120                   64                  128 
+
+Individuals                          Mean                  STD             Solver 0             Solver 1             Solver 2             Solver 3             Solver 4             Solver 5             Solver 6             Solver 7             Solver 8             Solver 9            Solver 10            Solver 11            Solver 12            Solver 13            Solver 14            Solver 15            Solver 16            Solver 17            Solver 18            Solver 19            Solver 20            Solver 21            Solver 22            Solver 23            Solver 24            Solver 25            Solver 26            Solver 27            Solver 28            Solver 29            Solver 30            Solver 31            Solver 32            Solver 33            Solver 34            Solver 35            Solver 36            Solver 37            Solver 38            Solver 39            Solver 40            Solver 41            Solver 42            Solver 43            Solver 44            Solver 45            Solver 46            Solver 47            Solver 48            Solver 49            Solver 50            Solver 51            Solver 52            Solver 53            Solver 54            Solver 55            Solver 56            Solver 57            Solver 58            Solver 59            Solver 60            Solver 61            Solver 62            Solver 63            Solver 64            Solver 65            Solver 66            Solver 67            Solver 68            Solver 69            Solver 70            Solver 71            Solver 72            Solver 73            Solver 74            Solver 75            Solver 76            Solver 77            Solver 78            Solver 79            Solver 80            Solver 81            Solver 82            Solver 83            Solver 84            Solver 85            Solver 86            Solver 87            Solver 88            Solver 89            Solver 90            Solver 91            Solver 92            Solver 93            Solver 94            Solver 95            Solver 96            Solver 97            Solver 98            Solver 99
+             MuGA-64               120.33   4.4586880346016615                  120                  125                  127                  115                  114                  110                  116                  117                  119                  119                  123                  126                  126                  121                  121                  128                  120                  117                  119                  121                  120                  119                  121                  119                  114                  119                  122                  123                  129                  121                  121                  126                  116                  108                  124                  126                  117                  112                  115                  120                  120                  119                  122                  119                  122                  117                  118                  109                  122                  122                  127                  127                  123                  121                  124                  122                  124                  121                  119                  125                  122                  128                  124                  117                  120                  124                  122                  123                  113                  115                  126                  121                  120                  117                  125                  119                  117                  123                  121                  125                  122                  125                  107                  121                  117                  122                  116                  126                  121                  120                  121                  124                  117                  115                  124                  124                  123                  113                  114                  120
+              SGA-64                   64                    0                   64                   64                   64                   64                   64                   64                   64                   64                   64                   64                   64                   64                   64                   64                   64                   64                   64                   64                   64                   64                   64                   64                   64                   64                   64                   64                   64                   64                   64                   64                   64                   64                   64                   64                   64                   64                   64                   64                   64                   64                   64                   64                   64                   64                   64                   64                   64                   64                   64                   64                   64                   64                   64                   64                   64                   64                   64                   64                   64                   64                   64                   64                   64                   64                   64                   64                   64                   64                   64                   64                   64                   64                   64                   64                   64                   64                   64                   64                   64                   64                   64                   64                   64                   64                   64                   64                   64                   64                   64                   64                   64                   64                   64                   64                   64                   64                   64                   64                   64                   64
+             SGA-128                  128                    0                  128                  128                  128                  128                  128                  128                  128                  128                  128                  128                  128                  128                  128                  128                  128                  128                  128                  128                  128                  128                  128                  128                  128                  128                  128                  128                  128                  128                  128                  128                  128                  128                  128                  128                  128                  128                  128                  128                  128                  128                  128                  128                  128                  128                  128                  128                  128                  128                  128                  128                  128                  128                  128                  128                  128                  128                  128                  128                  128                  128                  128                  128                  128                  128                  128                  128                  128                  128                  128                  128                  128                  128                  128                  128                  128                  128                  128                  128                  128                  128                  128                  128                  128                  128                  128                  128                  128                  128                  128                  128                  128                  128                  128                  128                  128                  128                  128                  128                  128                  128
+
+
+Individuals : Compare Means  using Student's t-test
+   Confidence 95%      0    1    2  Score Rank     Confidence 99%      0    1    2  Score Rank        p-Values          0      1      2  
+             MuGA-64   .    -    +    0     2                MuGA-64   .    -    +    0     2                MuGA-64  1.000  0.000  0.000
+              SGA-64   +    .    .    1     1                 SGA-64   +    .    .    1     1                 SGA-64  0.000    NaN    NaN
+             SGA-128   -    .    .   -1     3                SGA-128   -    .    .   -1     3                SGA-128  0.000    NaN    NaN
+
+
+#::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+                                   SUCESSRATE                                    
+#::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+SucessRate                        MuGA-64               SGA-64              SGA-128 
+                Mean                    1                    1                    1 
+                 Std                    0                    0                    0 
+             Minimum                    1                    1                    1 
+              Median                    1                    1                    1 
+             Maximum                    1                    1                    1 
+
+            Solver 0                    1                    1                    1 
+            Solver 1                    1                    1                    1 
+            Solver 2                    1                    1                    1 
+            Solver 3                    1                    1                    1 
+            Solver 4                    1                    1                    1 
+            Solver 5                    1                    1                    1 
+            Solver 6                    1                    1                    1 
+            Solver 7                    1                    1                    1 
+            Solver 8                    1                    1                    1 
+            Solver 9                    1                    1                    1 
+           Solver 10                    1                    1                    1 
+           Solver 11                    1                    1                    1 
+           Solver 12                    1                    1                    1 
+           Solver 13                    1                    1                    1 
+           Solver 14                    1                    1                    1 
+           Solver 15                    1                    1                    1 
+           Solver 16                    1                    1                    1 
+           Solver 17                    1                    1                    1 
+           Solver 18                    1                    1                    1 
+           Solver 19                    1                    1                    1 
+           Solver 20                    1                    1                    1 
+           Solver 21                    1                    1                    1 
+           Solver 22                    1                    1                    1 
+           Solver 23                    1                    1                    1 
+           Solver 24                    1                    1                    1 
+           Solver 25                    1                    1                    1 
+           Solver 26                    1                    1                    1 
+           Solver 27                    1                    1                    1 
+           Solver 28                    1                    1                    1 
+           Solver 29                    1                    1                    1 
+           Solver 30                    1                    1                    1 
+           Solver 31                    1                    1                    1 
+           Solver 32                    1                    1                    1 
+           Solver 33                    1                    1                    1 
+           Solver 34                    1                    1                    1 
+           Solver 35                    1                    1                    1 
+           Solver 36                    1                    1                    1 
+           Solver 37                    1                    1                    1 
+           Solver 38                    1                    1                    1 
+           Solver 39                    1                    1                    1 
+           Solver 40                    1                    1                    1 
+           Solver 41                    1                    1                    1 
+           Solver 42                    1                    1                    1 
+           Solver 43                    1                    1                    1 
+           Solver 44                    1                    1                    1 
+           Solver 45                    1                    1                    1 
+           Solver 46                    1                    1                    1 
+           Solver 47                    1                    1                    1 
+           Solver 48                    1                    1                    1 
+           Solver 49                    1                    1                    1 
+           Solver 50                    1                    1                    1 
+           Solver 51                    1                    1                    1 
+           Solver 52                    1                    1                    1 
+           Solver 53                    1                    1                    1 
+           Solver 54                    1                    1                    1 
+           Solver 55                    1                    1                    1 
+           Solver 56                    1                    1                    1 
+           Solver 57                    1                    1                    1 
+           Solver 58                    1                    1                    1 
+           Solver 59                    1                    1                    1 
+           Solver 60                    1                    1                    1 
+           Solver 61                    1                    1                    1 
+           Solver 62                    1                    1                    1 
+           Solver 63                    1                    1                    1 
+           Solver 64                    1                    1                    1 
+           Solver 65                    1                    1                    1 
+           Solver 66                    1                    1                    1 
+           Solver 67                    1                    1                    1 
+           Solver 68                    1                    1                    1 
+           Solver 69                    1                    1                    1 
+           Solver 70                    1                    1                    1 
+           Solver 71                    1                    1                    1 
+           Solver 72                    1                    1                    1 
+           Solver 73                    1                    1                    1 
+           Solver 74                    1                    1                    1 
+           Solver 75                    1                    1                    1 
+           Solver 76                    1                    1                    1 
+           Solver 77                    1                    1                    1 
+           Solver 78                    1                    1                    1 
+           Solver 79                    1                    1                    1 
+           Solver 80                    1                    1                    1 
+           Solver 81                    1                    1                    1 
+           Solver 82                    1                    1                    1 
+           Solver 83                    1                    1                    1 
+           Solver 84                    1                    1                    1 
+           Solver 85                    1                    1                    1 
+           Solver 86                    1                    1                    1 
+           Solver 87                    1                    1                    1 
+           Solver 88                    1                    1                    1 
+           Solver 89                    1                    1                    1 
+           Solver 90                    1                    1                    1 
+           Solver 91                    1                    1                    1 
+           Solver 92                    1                    1                    1 
+           Solver 93                    1                    1                    1 
+           Solver 94                    1                    1                    1 
+           Solver 95                    1                    1                    1 
+           Solver 96                    1                    1                    1 
+           Solver 97                    1                    1                    1 
+           Solver 98                    1                    1                    1 
+           Solver 99                    1                    1                    1 
+
+SucessRate                           Mean                  STD             Solver 0             Solver 1             Solver 2             Solver 3             Solver 4             Solver 5             Solver 6             Solver 7             Solver 8             Solver 9            Solver 10            Solver 11            Solver 12            Solver 13            Solver 14            Solver 15            Solver 16            Solver 17            Solver 18            Solver 19            Solver 20            Solver 21            Solver 22            Solver 23            Solver 24            Solver 25            Solver 26            Solver 27            Solver 28            Solver 29            Solver 30            Solver 31            Solver 32            Solver 33            Solver 34            Solver 35            Solver 36            Solver 37            Solver 38            Solver 39            Solver 40            Solver 41            Solver 42            Solver 43            Solver 44            Solver 45            Solver 46            Solver 47            Solver 48            Solver 49            Solver 50            Solver 51            Solver 52            Solver 53            Solver 54            Solver 55            Solver 56            Solver 57            Solver 58            Solver 59            Solver 60            Solver 61            Solver 62            Solver 63            Solver 64            Solver 65            Solver 66            Solver 67            Solver 68            Solver 69            Solver 70            Solver 71            Solver 72            Solver 73            Solver 74            Solver 75            Solver 76            Solver 77            Solver 78            Solver 79            Solver 80            Solver 81            Solver 82            Solver 83            Solver 84            Solver 85            Solver 86            Solver 87            Solver 88            Solver 89            Solver 90            Solver 91            Solver 92            Solver 93            Solver 94            Solver 95            Solver 96            Solver 97            Solver 98            Solver 99
+             MuGA-64                    1                    0                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1
+              SGA-64                    1                    0                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1
+             SGA-128                    1                    0                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1                    1
+
+
+SucessRate : Compare Means  using Student's t-test
+   Confidence 95%      0    1    2  Score Rank     Confidence 99%      0    1    2  Score Rank        p-Values          0      1      2  
+             MuGA-64   .    .    .    0     1                MuGA-64   .    .    .    0     1                MuGA-64    NaN    NaN    NaN
+              SGA-64   .    .    .    0     1                 SGA-64   .    .    .    0     1                 SGA-64    NaN    NaN    NaN
+             SGA-128   .    .    .    0     1                SGA-128   .    .    .    0     1                SGA-128    NaN    NaN    NaN
+
+
+#::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+                                      TIME                                       
+#::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Time                              MuGA-64               SGA-64              SGA-128 
+                Mean             31843.31             31380.53             31175.44 
+                 Std   162.16948952662818    282.0986092726661   143.82419964677098 
+             Minimum                31624                30531                30936 
+              Median                31858                31515                31108 
+             Maximum                32187                31890                31389 
+
+            Solver 0                32187                31890                30936 
+            Solver 1                32124                31811                31030 
+            Solver 2                32124                31827                31046 
+            Solver 3                32093                31811                30984 
+            Solver 4                32093                31827                31046 
+            Solver 5                32093                31811                31046 
+            Solver 6                32077                30531                30968 
+            Solver 7                31640                31796                31046 
+            Solver 8                32077                30531                31046 
+            Solver 9                31640                30546                30968 
+           Solver 10                32077                31125                31062 
+           Solver 11                31640                31125                31062 
+           Solver 12                32077                31140                30984 
+           Solver 13                31640                31140                30984 
+           Solver 14                32077                31155                31000 
+           Solver 15                32062                31155                31062 
+           Solver 16                31624                31155                31062 
+           Solver 17                32062                31155                31000 
+           Solver 18                32062                31171                31062 
+           Solver 19                32030                31171                31015 
+           Solver 20                31624                31171                31077 
+           Solver 21                32030                31171                31015 
+           Solver 22                31624                31187                31061 
+           Solver 23                31640                31187                31061 
+           Solver 24                32030                31187                31015 
+           Solver 25                32015                31187                31015 
+           Solver 26                31640                31187                31015 
+           Solver 27                32015                31187                31031 
+           Solver 28                31640                31187                31031 
+           Solver 29                32015                31187                31031 
+           Solver 30                31640                31218                31077 
+           Solver 31                31999                31218                31031 
+           Solver 32                31984                31218                31031 
+           Solver 33                31984                31218                31077 
+           Solver 34                31984                30578                31077 
+           Solver 35                31984                31218                31062 
+           Solver 36                31984                31218                31062 
+           Solver 37                31625                31218                31093 
+           Solver 38                31968                30718                31093 
+           Solver 39                31640                30656                31062 
+           Solver 40                31968                31358                31062 
+           Solver 41                31640                30905                31062 
+           Solver 42                31968                30905                31093 
+           Solver 43                31953                31312                31108 
+           Solver 44                31624                31499                31077 
+           Solver 45                31937                31499                31077 
+           Solver 46                31937                31499                31077 
+           Solver 47                31921                31515                31108 
+           Solver 48                31624                31515                31108 
+           Solver 49                31921                31515                31093 
+           Solver 50                31905                31515                31093 
+           Solver 51                31905                31500                31124 
+           Solver 52                31890                31500                31124 
+           Solver 53                31640                31500                31109 
+           Solver 54                31890                31500                31109 
+           Solver 55                31640                31515                31109 
+           Solver 56                31890                31515                31296 
+           Solver 57                31890                31515                31296 
+           Solver 58                31640                31515                31311 
+           Solver 59                31890                31515                31311 
+           Solver 60                31624                31515                31311 
+           Solver 61                31858                31515                31296 
+           Solver 62                31624                31531                31296 
+           Solver 63                31858                31515                31296 
+           Solver 64                31624                31531                31296 
+           Solver 65                31858                31515                31296 
+           Solver 66                31640                31515                31312 
+           Solver 67                31843                31515                31312 
+           Solver 68                31843                31515                31312 
+           Solver 69                31843                31515                31312 
+           Solver 70                31827                31515                31312 
+           Solver 71                31827                31531                31312 
+           Solver 72                31827                31531                31328 
+           Solver 73                31796                31531                31328 
+           Solver 74                31625                31531                31328 
+           Solver 75                31796                31531                31312 
+           Solver 76                31796                31531                31312 
+           Solver 77                31625                31531                31312 
+           Solver 78                31796                31546                31327 
+           Solver 79                31625                31515                31327 
+           Solver 80                31625                31530                31327 
+           Solver 81                31796                31530                31327 
+           Solver 82                31781                31530                31327 
+           Solver 83                31718                31530                31343 
+           Solver 84                31874                31530                31343 
+           Solver 85                31733                31530                31343 
+           Solver 86                31874                31530                31343 
+           Solver 87                31733                31530                31343 
+           Solver 88                31874                31546                31359 
+           Solver 89                31765                31546                31343 
+           Solver 90                31874                31546                31358 
+           Solver 91                31765                31546                31358 
+           Solver 92                31874                31546                31358 
+           Solver 93                31765                31546                31358 
+           Solver 94                31859                31531                31374 
+           Solver 95                31765                31546                31374 
+           Solver 96                31859                31546                31389 
+           Solver 97                31765                31546                31389 
+           Solver 98                31875                31546                31389 
+           Solver 99                31765                31546                31389 
+
+Time                                 Mean                  STD             Solver 0             Solver 1             Solver 2             Solver 3             Solver 4             Solver 5             Solver 6             Solver 7             Solver 8             Solver 9            Solver 10            Solver 11            Solver 12            Solver 13            Solver 14            Solver 15            Solver 16            Solver 17            Solver 18            Solver 19            Solver 20            Solver 21            Solver 22            Solver 23            Solver 24            Solver 25            Solver 26            Solver 27            Solver 28            Solver 29            Solver 30            Solver 31            Solver 32            Solver 33            Solver 34            Solver 35            Solver 36            Solver 37            Solver 38            Solver 39            Solver 40            Solver 41            Solver 42            Solver 43            Solver 44            Solver 45            Solver 46            Solver 47            Solver 48            Solver 49            Solver 50            Solver 51            Solver 52            Solver 53            Solver 54            Solver 55            Solver 56            Solver 57            Solver 58            Solver 59            Solver 60            Solver 61            Solver 62            Solver 63            Solver 64            Solver 65            Solver 66            Solver 67            Solver 68            Solver 69            Solver 70            Solver 71            Solver 72            Solver 73            Solver 74            Solver 75            Solver 76            Solver 77            Solver 78            Solver 79            Solver 80            Solver 81            Solver 82            Solver 83            Solver 84            Solver 85            Solver 86            Solver 87            Solver 88            Solver 89            Solver 90            Solver 91            Solver 92            Solver 93            Solver 94            Solver 95            Solver 96            Solver 97            Solver 98            Solver 99
+             MuGA-64             31843.31   162.16948952662818                32187                32124                32124                32093                32093                32093                32077                31640                32077                31640                32077                31640                32077                31640                32077                32062                31624                32062                32062                32030                31624                32030                31624                31640                32030                32015                31640                32015                31640                32015                31640                31999                31984                31984                31984                31984                31984                31625                31968                31640                31968                31640                31968                31953                31624                31937                31937                31921                31624                31921                31905                31905                31890                31640                31890                31640                31890                31890                31640                31890                31624                31858                31624                31858                31624                31858                31640                31843                31843                31843                31827                31827                31827                31796                31625                31796                31796                31625                31796                31625                31625                31796                31781                31718                31874                31733                31874                31733                31874                31765                31874                31765                31874                31765                31859                31765                31859                31765                31875                31765
+              SGA-64             31380.53    282.0986092726661                31890                31811                31827                31811                31827                31811                30531                31796                30531                30546                31125                31125                31140                31140                31155                31155                31155                31155                31171                31171                31171                31171                31187                31187                31187                31187                31187                31187                31187                31187                31218                31218                31218                31218                30578                31218                31218                31218                30718                30656                31358                30905                30905                31312                31499                31499                31499                31515                31515                31515                31515                31500                31500                31500                31500                31515                31515                31515                31515                31515                31515                31515                31531                31515                31531                31515                31515                31515                31515                31515                31515                31531                31531                31531                31531                31531                31531                31531                31546                31515                31530                31530                31530                31530                31530                31530                31530                31530                31546                31546                31546                31546                31546                31546                31531                31546                31546                31546                31546                31546
+             SGA-128             31175.44   143.82419964677098                30936                31030                31046                30984                31046                31046                30968                31046                31046                30968                31062                31062                30984                30984                31000                31062                31062                31000                31062                31015                31077                31015                31061                31061                31015                31015                31015                31031                31031                31031                31077                31031                31031                31077                31077                31062                31062                31093                31093                31062                31062                31062                31093                31108                31077                31077                31077                31108                31108                31093                31093                31124                31124                31109                31109                31109                31296                31296                31311                31311                31311                31296                31296                31296                31296                31296                31312                31312                31312                31312                31312                31312                31328                31328                31328                31312                31312                31312                31327                31327                31327                31327                31327                31343                31343                31343                31343                31343                31359                31343                31358                31358                31358                31358                31374                31374                31389                31389                31389                31389
+
+
+Time : Compare Means  using Student's t-test
+   Confidence 95%      0    1    2  Score Rank     Confidence 99%      0    1    2  Score Rank        p-Values          0      1      2  
+             MuGA-64   .    -    -   -2     3                MuGA-64   .    -    -   -2     3                MuGA-64  1.000  0.000  0.000
+              SGA-64   +    .    -    0     2                 SGA-64   +    .    -    0     2                 SGA-64  0.000  1.000  0.000
+             SGA-128   +    +    .    2     1                SGA-128   +    +    .    2     1                SGA-128  0.000  0.000  1.000
+
+
+#::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+                                  FUNCTIONCALLS                                  
+#::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+FunctionCalls                     MuGA-64               SGA-64              SGA-128 
+                Mean              9973.98             11113.95             11114.41 
+                 Std    93.00895796974082    40.70821896016935    43.47647570122645 
+             Minimum                 9764                10981                11009 
+              Median                 9977                11114                11112 
+             Maximum                10189                11205                11249 
+
+            Solver 0                10015                11123                11104 
+            Solver 1                 9818                11035                11084 
+            Solver 2                 9963                11072                11053 
+            Solver 3                10060                11198                11081 
+            Solver 4                 9949                11104                11036 
+            Solver 5                 9997                11126                11079 
+            Solver 6                 9953                11055                11089 
+            Solver 7                10040                11147                11139 
+            Solver 8                 9996                11142                11070 
+            Solver 9                 9922                11149                11155 
+           Solver 10                 9977                11067                11162 
+           Solver 11                 9988                11133                11040 
+           Solver 12                 9960                11107                11080 
+           Solver 13                 9992                11124                11083 
+           Solver 14                 9899                11116                11145 
+           Solver 15                 9861                11142                11249 
+           Solver 16                 9867                11099                11127 
+           Solver 17                10065                11116                11135 
+           Solver 18                10070                11099                11077 
+           Solver 19                 9924                11054                11132 
+           Solver 20                 9987                11084                11110 
+           Solver 21                10189                11114                11104 
+           Solver 22                 9870                10981                11104 
+           Solver 23                 9986                11141                11049 
+           Solver 24                 9988                11170                11061 
+           Solver 25                10034                11088                11070 
+           Solver 26                10080                11098                11140 
+           Solver 27                10040                11072                11175 
+           Solver 28                10050                11059                11147 
+           Solver 29                10141                11036                11184 
+           Solver 30                 9968                11135                11131 
+           Solver 31                10022                11126                11124 
+           Solver 32                 9979                11108                11143 
+           Solver 33                 9923                11158                11155 
+           Solver 34                 9825                11109                11038 
+           Solver 35                10070                11154                11110 
+           Solver 36                10064                11091                11128 
+           Solver 37                10026                11102                11113 
+           Solver 38                 9895                11117                11157 
+           Solver 39                10071                11147                11153 
+           Solver 40                 9928                11089                11087 
+           Solver 41                10163                11131                11178 
+           Solver 42                10007                11112                11098 
+           Solver 43                10073                11157                11173 
+           Solver 44                10076                11180                11108 
+           Solver 45                10014                11099                11066 
+           Solver 46                10008                11119                11105 
+           Solver 47                 9773                11103                11077 
+           Solver 48                 9764                11149                11133 
+           Solver 49                 9935                11050                11059 
+           Solver 50                 9965                11131                11078 
+           Solver 51                 9933                11121                11142 
+           Solver 52                 9905                11088                11139 
+           Solver 53                 9981                11104                11170 
+           Solver 54                10030                11097                11081 
+           Solver 55                 9836                11118                11066 
+           Solver 56                 9833                11080                11141 
+           Solver 57                10026                11137                11141 
+           Solver 58                10012                11102                11107 
+           Solver 59                 9822                11132                11132 
+           Solver 60                 9862                11081                11096 
+           Solver 61                 9954                11075                11174 
+           Solver 62                 9784                11097                11103 
+           Solver 63                 9998                11093                11192 
+           Solver 64                10181                11174                11063 
+           Solver 65                 9955                11159                11094 
+           Solver 66                 9885                11113                11194 
+           Solver 67                 9966                11174                11108 
+           Solver 68                10060                11205                11191 
+           Solver 69                 9975                11181                11157 
+           Solver 70                 9963                11148                11036 
+           Solver 71                 9941                11132                11143 
+           Solver 72                10141                11133                11145 
+           Solver 73                 9978                11147                11096 
+           Solver 74                 9916                11136                11068 
+           Solver 75                 9843                11177                11129 
+           Solver 76                 9960                11025                11110 
+           Solver 77                 9802                11128                11082 
+           Solver 78                 9768                11111                11158 
+           Solver 79                 9928                11090                11059 
+           Solver 80                 9939                11101                11071 
+           Solver 81                 9872                11127                11126 
+           Solver 82                10124                11058                11066 
+           Solver 83                10054                11119                11158 
+           Solver 84                10075                11109                11118 
+           Solver 85                 9959                11109                11173 
+           Solver 86                 9908                11117                11009 
+           Solver 87                10068                11052                11171 
+           Solver 88                10108                11171                11133 
+           Solver 89                 9887                11084                11057 
+           Solver 90                 9951                11050                11108 
+           Solver 91                10078                11109                11147 
+           Solver 92                 9942                11111                11147 
+           Solver 93                10017                11077                11112 
+           Solver 94                10009                11161                11080 
+           Solver 95                 9956                11153                11140 
+           Solver 96                10092                11200                11147 
+           Solver 97                 9938                11092                11098 
+           Solver 98                10058                11172                11067 
+           Solver 99                 9895                11047                11118 
+
+FunctionCalls                        Mean                  STD             Solver 0             Solver 1             Solver 2             Solver 3             Solver 4             Solver 5             Solver 6             Solver 7             Solver 8             Solver 9            Solver 10            Solver 11            Solver 12            Solver 13            Solver 14            Solver 15            Solver 16            Solver 17            Solver 18            Solver 19            Solver 20            Solver 21            Solver 22            Solver 23            Solver 24            Solver 25            Solver 26            Solver 27            Solver 28            Solver 29            Solver 30            Solver 31            Solver 32            Solver 33            Solver 34            Solver 35            Solver 36            Solver 37            Solver 38            Solver 39            Solver 40            Solver 41            Solver 42            Solver 43            Solver 44            Solver 45            Solver 46            Solver 47            Solver 48            Solver 49            Solver 50            Solver 51            Solver 52            Solver 53            Solver 54            Solver 55            Solver 56            Solver 57            Solver 58            Solver 59            Solver 60            Solver 61            Solver 62            Solver 63            Solver 64            Solver 65            Solver 66            Solver 67            Solver 68            Solver 69            Solver 70            Solver 71            Solver 72            Solver 73            Solver 74            Solver 75            Solver 76            Solver 77            Solver 78            Solver 79            Solver 80            Solver 81            Solver 82            Solver 83            Solver 84            Solver 85            Solver 86            Solver 87            Solver 88            Solver 89            Solver 90            Solver 91            Solver 92            Solver 93            Solver 94            Solver 95            Solver 96            Solver 97            Solver 98            Solver 99
+             MuGA-64              9973.98    93.00895796974082                10015                 9818                 9963                10060                 9949                 9997                 9953                10040                 9996                 9922                 9977                 9988                 9960                 9992                 9899                 9861                 9867                10065                10070                 9924                 9987                10189                 9870                 9986                 9988                10034                10080                10040                10050                10141                 9968                10022                 9979                 9923                 9825                10070                10064                10026                 9895                10071                 9928                10163                10007                10073                10076                10014                10008                 9773                 9764                 9935                 9965                 9933                 9905                 9981                10030                 9836                 9833                10026                10012                 9822                 9862                 9954                 9784                 9998                10181                 9955                 9885                 9966                10060                 9975                 9963                 9941                10141                 9978                 9916                 9843                 9960                 9802                 9768                 9928                 9939                 9872                10124                10054                10075                 9959                 9908                10068                10108                 9887                 9951                10078                 9942                10017                10009                 9956                10092                 9938                10058                 9895
+              SGA-64             11113.95    40.70821896016935                11123                11035                11072                11198                11104                11126                11055                11147                11142                11149                11067                11133                11107                11124                11116                11142                11099                11116                11099                11054                11084                11114                10981                11141                11170                11088                11098                11072                11059                11036                11135                11126                11108                11158                11109                11154                11091                11102                11117                11147                11089                11131                11112                11157                11180                11099                11119                11103                11149                11050                11131                11121                11088                11104                11097                11118                11080                11137                11102                11132                11081                11075                11097                11093                11174                11159                11113                11174                11205                11181                11148                11132                11133                11147                11136                11177                11025                11128                11111                11090                11101                11127                11058                11119                11109                11109                11117                11052                11171                11084                11050                11109                11111                11077                11161                11153                11200                11092                11172                11047
+             SGA-128             11114.41    43.47647570122645                11104                11084                11053                11081                11036                11079                11089                11139                11070                11155                11162                11040                11080                11083                11145                11249                11127                11135                11077                11132                11110                11104                11104                11049                11061                11070                11140                11175                11147                11184                11131                11124                11143                11155                11038                11110                11128                11113                11157                11153                11087                11178                11098                11173                11108                11066                11105                11077                11133                11059                11078                11142                11139                11170                11081                11066                11141                11141                11107                11132                11096                11174                11103                11192                11063                11094                11194                11108                11191                11157                11036                11143                11145                11096                11068                11129                11110                11082                11158                11059                11071                11126                11066                11158                11118                11173                11009                11171                11133                11057                11108                11147                11147                11112                11080                11140                11147                11098                11067                11118
+
+
+FunctionCalls : Compare Means  using Student's t-test
+   Confidence 95%      0    1    2  Score Rank     Confidence 99%      0    1    2  Score Rank        p-Values          0      1      2  
+             MuGA-64   .    +    +    2     1                MuGA-64   .    +    +    2     1                MuGA-64  1.000  0.000  0.000
+              SGA-64   -    .    .   -1     2                 SGA-64   -    .    .   -1     2                 SGA-64  0.000  1.000  0.939
+             SGA-128   -    .    .   -1     2                SGA-128   -    .    .   -1     2                SGA-128  0.000  0.939  1.000
+
+
+
+#::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+##::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+#A:\GitHub\desktop\MuGA\MuGA_20\evolutions\MuGA-64\MuGA-64.txt
+##::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+#solver name          = MuGA-64
+#random seed          = 123
+#number of runs       = 100
+#
+#solver type         = GA
+#stop criteria       = MaxGeneration 101
+#
+#problem name        = bits.OneMax 128
+#population type     = MultiPopulation 64
+#
+#selection           = MTournamentSelection 2.0 2
+#recombination       = Uniform 0.75 0.5
+#mutation            = FlipBit -1.0
+#replacement         = TournamentReplacement
+#rescaling           = AdaptiveCeiling 1.5
+#
+#statistic           = Generation
+#statistic           = Individuals
+#statistic           = SucessRate
+#statistic           = Time
+#statistic           = FunctionCalls
+#
+##::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+#A:\GitHub\desktop\MuGA\MuGA_20\evolutions\SGA-64\SGA-64.txt
+##::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+#solver name          = SGA-64
+#random seed          = 123
+#number of runs       = 100
+#
+#solver type         = GA
+#stop criteria       = MaxGeneration 101
+#
+#problem name        = bits.OneMax 128
+#population type     = SimplePopulation 64
+#
+#selection           = MTournamentSelection 2.0 2
+#recombination       = Uniform 0.75 0.5
+#mutation            = FlipBit -1.0
+#replacement         = TournamentReplacement
+#rescaling           = AdaptiveCeiling 1.5
+#
+#statistic           = Generation
+#statistic           = Individuals
+#statistic           = SucessRate
+#statistic           = Time
+#statistic           = FunctionCalls
+#
+##::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+#A:\GitHub\desktop\MuGA\MuGA_20\evolutions\SGA-128\SGA-128.txt
+##::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+#solver name          = SGA-128
+#random seed          = 123
+#number of runs       = 100
+#
+#solver type         = GA
+#stop criteria       = MaxGeneration 101
+#
+#problem name        = bits.OneMax 128
+#population type     = SimplePopulation 128
+#
+#selection           = MTournamentSelection 1.0 2
+#recombination       = Uniform 0.75 0.5
+#mutation            = FlipBit -1.0
+#replacement         = TournamentReplacement
+#rescaling           = AdaptiveCeiling 1.5
+#
+#statistic           = Generation
+#statistic           = Individuals
+#statistic           = SucessRate
+#statistic           = Time
+#statistic           = FunctionCalls
+#
+#
+#::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+<hr>MuGA - Multiset Genetic Algorithm - Thesis (c)M@nso 2019  2020/01/15 06:47

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<!--
+MUGA
+-->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <style> 
+            H1, H2 {
+                color: green;
+                font-family: Verdana, Helvetica, Arial, sans-serif;
+            }
+        </style>
+        <title>FlipBit.java</title>
+        <link href='http://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.css' rel='stylesheet' type='text/css'/>        
+
+    </head>
+    <body>
+        <script src='http://cdnjs.cloudflare.com/ajax/libs/prettify/r298/run_prettify.js'></script>
+        <h1>FlipBit.java</h1>
+        <pre  class="prettyprint" id="java">
+<!-------------------MUGA SOURCE CODE (c) M@nso  -->
+//::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: 
+//::     Antonio Manso                        Luis Correia                   ::
+//::     manso@ipt.pt                   Luis.Correia@ciencias.ulisboa.pt     ::
+//::                                                                         ::
+//::     Biosystems & Integrative Sciences Institute                         ::
+//::     Faculty of Sciences University of Lisboa                            ::
+//::                                                                         ::
+//::     Instituto Politécnico de Tomar                                      ::
+//::     Escola Superior de Tecnologia de Tomar                              ::
+//::                                                                         ::
+//::     This software was build with the purpose of investigate and         ::
+//::     learning.                                                           ::
+//::                                                             (c) 2019    ::
+//:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+//////////////////////////////////////////////////////////////////////////////
+
+package com.evolutionary.operator.mutation;
+
+import com.evolutionary.problem.bits.BinaryString;
+import com.evolutionary.problem.Individual;
+
+/**
+ * Created on 2/out/2015, 7:50:41
+ *
+ * @author zulu - computer
+ */
+public class FlipBit extends Mutation {
+
+   
+        
+
+
+    @Override
+    public void mutate(Individual solution) {
+         double mutProbability =  getMutProbability(solution);
+        //get individual
+        BinaryString mut = (BinaryString) solution;
+        //get bits
+        boolean[] bits = mut.getBitsGenome();
+        //for each bit
+        for (int j = 0; j < bits.length; j++) {
+            //get chance
+            if (random.nextDouble() < mutProbability) {
+                //change bit
+                bits[j] = !bits[j];
+                //remove evaluation
+                mut.setNotEvaluated();
+            }
+        }
+    }
+
+    @Override
+    public String getInformation() {
+        StringBuilder txt = new StringBuilder(getName());
+        txt.append("\n" + getClass().getSimpleName() + "( P_MUT )\n");
+        txt.append("\n\nmutate bits in the genome");
+        txt.append("\n\nParameters:");
+        txt.append("\n    <P_MUT>  - probability to mutate one bit");
+        txt.append("\n             -1.0 => 1.0 / genome.lenght");
+
+        return txt.toString();
+    }
+    //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+    private static final long serialVersionUID = 201510020750L;
+    //:::::::::::::::::::::::::::  Copyright(c) M@nso  2015  :::::::::::::::::::
+    ///////////////////////////////////////////////////////////////////////////
+
+}
+
+<!-------------------MUGA SOURCE CODE (c) M@nso  -->       
+        </pre>
+
+        <font face="verdana" color=#C8C8C8 size=2>
+        <hr>MuGA - Multiset Genetic Algorithm - Thesis (c)M@nso 2019  2020/01/14 18:46         
+    </body>
+</html>
+

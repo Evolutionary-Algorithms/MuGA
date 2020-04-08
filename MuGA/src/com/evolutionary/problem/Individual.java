@@ -218,25 +218,7 @@ public abstract class Individual extends Genetic implements Comparable<Individua
     }
 
     public String toStringIndividual() {
-        StringBuilder txt = new StringBuilder();
-        if (numberOfCopies == 1) {
-            txt.append("    ");
-        } else {
-            txt.append(String.format("[%2d]", getNumberOfCopies()));
-        }
-        if (isEvaluated()) {
-            txt.append(MyNumber.numberToString(value, 16) + " = ");
-        } else {
-            txt.append(MyString.setSize("NOT EVAL", 16) + " = ");
-        }
-        txt.append(toStringGenome());
-        txt.append("\t(" + getClass().getSimpleName() + ")");
-
-        if (isOptimum()) {
-            txt.append(" OPTIMUM ");
-        }
-
-        return txt.toString();
+       return toStringPhenotypeIndividual();
     }
 
     public String toStringPhenotypeIndividual() {
@@ -247,12 +229,13 @@ public abstract class Individual extends Genetic implements Comparable<Individua
             txt.append(String.format("[%2d]", getNumberOfCopies()));
         }
         if (isEvaluated()) {
-            txt.append(MyNumber.numberToString(value, 12) + " = ");
+            txt.append(MyNumber.numberToString(value, 12));
         } else {
-            txt.append(MyString.setSize("NOT EVAL", 12) + " = ");
+            txt.append(MyString.setSize("NOT EVAL", 12) );
         }
+        txt.append(" = " + getClass().getSimpleName() + "( ");
         txt.append(toStringPhenotype());
-        txt.append("\t(" + getClass().getSimpleName() + ")");
+        txt.append(" )");
 
         if (isOptimum()) {
             txt.append(" OPTIMUM ");

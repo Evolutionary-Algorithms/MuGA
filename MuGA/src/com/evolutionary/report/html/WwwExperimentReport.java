@@ -136,6 +136,10 @@ public class WwwExperimentReport {
     public static void save(EAExperiment experiment, String fileName, Component window) {
         try {
             new WwwExperimentReport(experiment).save(fileName, window);
+            File path = new File(fileName).getParentFile();
+            path = new File(path, "index.html");
+            java.awt.Desktop.getDesktop().browse(path.toURI());
+
         } catch (Exception ex) {
             Logger.getLogger(WwwExperimentReport.class.getName()).log(Level.SEVERE, null, ex);
         }

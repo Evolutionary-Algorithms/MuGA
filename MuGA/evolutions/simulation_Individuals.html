@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<!--
+MUGA
+-->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="../../style.css">
+        <link rel="stylesheet" type="text/css" href="../style.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <title>MuGA</title>        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">        
+    </head>
+    <body>
+        <ul>
+<table  style="width:100%"><tr>
+<td width="1px"><li ><a class="active" href="simulation_Individuals.csv"  download>simulation_Individuals.csv</a></li></td>
+<td align="center"> <h1> Number of Individuals</h1></td>
+</tr></table>
+</ul>
+        <h2> Evolution of Individuals</h2><hr>
+<table>
+<tr valign="top">
+<td><img src="simulation_Individuals_evol.jpg"></td>
+<td>
+<table><tr><td><img src="simulation_Individuals_box2.jpg"></td><td><img src="simulation_Individuals_rank2.jpg"></td> 
+</tr>
+<tr><td colspan="2"><plain>Number of individuals in parents population
+</plain></td></tr>
+</table></td></tr>
+</table><h2> Statistics  of last generation of Individuals</h2><hr>
+<table>
+<tr valign="top">
+<td><img src="simulation_Individuals_box.jpg"></td>
+<td>
+<table><tr><td><img src="simulation_Individuals_evol2.jpg"></td>
+<td><img src="simulation_Individuals_rank2.jpg"></td>
+</tr>
+<tr><td colspan="2"><table>
+<tr><th></th>
+<th>MEAN</th><th>STD</th><th>MIN</th><th>MEDIAN</th><th>MAX</th><th>Q1</th><th>Q3</th>
+<tr align="right">
+<th>MuGA-64</th><td ><pre>120.3300</pre></td><td ><pre>4.4587</pre></td><td ><pre>107</pre></td><td ><pre>121</pre></td><td ><pre>129</pre></td><td ><pre>117</pre></td><td ><pre>124</pre></td>
+</tr>
+
+<tr align="right">
+<th>SGA-64</th><td ><pre>64</pre></td><td ><pre>0</pre></td><td ><pre>64</pre></td><td ><pre>64</pre></td><td ><pre>64</pre></td><td ><pre>64</pre></td><td ><pre>64</pre></td>
+</tr>
+
+<tr align="right">
+<th>SGA-128</th><td ><pre>128</pre></td><td ><pre>0</pre></td><td ><pre>128</pre></td><td ><pre>128</pre></td><td ><pre>128</pre></td><td ><pre>128</pre></td><td ><pre>128</pre></td>
+</tr>
+</table>
+</td></tr>
+</table></td></tr>
+</table><h2> Ranks of Individuals</h2><hr>
+<table>
+<tr valign="top">
+<tr valign="top">
+<td><img src="simulation_Individuals_rank.jpg"></td>
+<td>
+<table><tr><td><img src="simulation_Individuals_box2.jpg"></td>
+<td><img src="simulation_Individuals_evol2.jpg"></td>
+</tr>
+<tr><td colspan="2"><pre><h3> Comparison of means - confidence 95% </h3><table>
+<tr>
+	<th></th>
+	<th>MuGA-64</th>
+	<th>SGA-64</th>
+	<th>SGA-128</th>
+	<th>Score</th>
+	<th>Rank</th>
+<tr>
+	<th align="right">MuGA-64</th>
+<td align="center"  bgcolor="#ffff99"> .</td>
+<td align="center"  bgcolor="#ff9999"> -</td>
+<td align="center"  bgcolor="#9999ff"> +</td>
+<td align="center">0</td><td align="center">2</td><tr>
+	<th align="right">SGA-64</th>
+<td align="center"  bgcolor="#9999ff"> +</td>
+<td align="center"  bgcolor="#ffff99"> .</td>
+<td align="center"  bgcolor="#ffff99"> .</td>
+<td align="center">1</td><td align="center">1</td><tr>
+	<th align="right">SGA-128</th>
+<td align="center"  bgcolor="#ff9999"> -</td>
+<td align="center"  bgcolor="#ffff99"> .</td>
+<td align="center"  bgcolor="#ffff99"> .</td>
+<td align="center">-1</td><td align="center">3</td></table>
+</pre></td></tr>
+</table></td></tr>
+
+
+</table>
+<h2>IndividualsSolvers  data </h2><hr>
+<table>
+<tr align="center" ><th >Solver</th><th >MuGA-64</th><th >SGA-64</th><th >SGA-128</th></tr>
+<tr align="center" ><td>Solver 0</td><td><pre>120</pre></td><td><pre>64</pre></td><td><pre>128</pre></td></tr>
+<tr align="center" ><td>Solver 1</td><td><pre>125</pre></td><td><pre>64</pre></td><td><pre>128</pre></td></tr>
+<tr align="center" ><td>Solver 2</td><td><pre>127</pre></td><td><pre>64</pre></td><td><pre>128</pre></td></tr>
+<tr align="center" ><td>Solver 3</td><td><pre>115</pre></td><td><pre>64</pre></td><td><pre>128</pre></td></tr>
+<tr align="center" ><td>Solver 4</td><td><pre>114</pre></td><td><pre>64</pre></td><td><pre>128</pre></td></tr>
+<tr align="center" ><td>Solver 5</td><td><pre>110</pre></td><td><pre>64</pre></td><td><pre>128</pre></td></tr>
+<tr align="center" ><td>Solver 6</td><td><pre>116</pre></td><td><pre>64</pre></td><td><pre>128</pre></td></tr>
+<tr align="center" ><td>Solver 7</td><td><pre>117</pre></td><td><pre>64</pre></td><td><pre>128</pre></td></tr>
+<tr align="center" ><td>Solver 8</td><td><pre>119</pre></td><td><pre>64</pre></td><td><pre>128</pre></td></tr>
+<tr align="center" ><td>Solver 9</td><td><pre>119</pre></td><td><pre>64</pre></td><td><pre>128</pre></td></tr>
+<tr align="center" ><td>Solver 10</td><td><pre>123</pre></td><td><pre>64</pre></td><td><pre>128</pre></td></tr>
+<tr align="center" ><td>Solver 11</td><td><pre>126</pre></td><td><pre>64</pre></td><td><pre>128</pre></td></tr>
+<tr align="center" ><td>Solver 12</td><td><pre>126</pre></td><td><pre>64</pre></td><td><pre>128</pre></td></tr>
+<tr align="center" ><td>Solver 13</td><td><pre>121</pre></td><td><pre>64</pre></td><td><pre>128</pre></td></tr>
+<tr align="center" ><td>Solver 14</td><td><pre>121</pre></td><td><pre>64</pre></td><td><pre>128</pre></td></tr>
+<tr align="center" ><td>Solver 15</td><td><pre>128</pre></td><td><pre>64</pre></td><td><pre>128</pre></td></tr>
+<tr align="center" ><td>Solver 16</td><td><pre>120</pre></td><td><pre>64</pre></td><td><pre>128</pre></td></tr>
+<tr align="center" ><td>Solver 17</td><td><pre>117</pre></td><td><pre>64</pre></td><td><pre>128</pre></td></tr>
+<tr align="center" ><td>Solver 18</td><td><pre>119</pre></td><td><pre>64</pre></td><td><pre>128</pre></td></tr>
+<tr align="center" ><td>Solver 19</td><td><pre>121</pre></td><td><pre>64</pre></td><td><pre>128</pre></td></tr>
+<tr align="center" ><td>Solver 20</td><td><pre>120</pre></td><td><pre>64</pre></td><td><pre>128</pre></td></tr>
+<tr align="center" ><td>Solver 21</td><td><pre>119</pre></td><td><pre>64</pre></td><td><pre>128</pre></td></tr>
+<tr align="center" ><td>Solver 22</td><td><pre>121</pre></td><td><pre>64</pre></td><td><pre>128</pre></td></tr>
+<tr align="center" ><td>Solver 23</td><td><pre>119</pre></td><td><pre>64</pre></td><td><pre>128</pre></td></tr>
+<tr align="center" ><td>Solver 24</td><td><pre>114</pre></td><td><pre>64</pre></td><td><pre>128</pre></td></tr>
+<tr align="center" ><td>Solver 25</td><td><pre>119</pre></td><td><pre>64</pre></td><td><pre>128</pre></td></tr>
+<tr align="center" ><td>Solver 26</td><td><pre>122</pre></td><td><pre>64</pre></td><td><pre>128</pre></td></tr>
+<tr align="center" ><td>Solver 27</td><td><pre>123</pre></td><td><pre>64</pre></td><td><pre>128</pre></td></tr>
+<tr align="center" ><td>Solver 28</td><td><pre>129</pre></td><td><pre>64</pre></td><td><pre>128</pre></td></tr>
+<tr align="center" ><td>Solver 29</td><td><pre>121</pre></td><td><pre>64</pre></td><td><pre>128</pre></td></tr>
+<tr align="center" ><td>Solver 30</td><td><pre>121</pre></td><td><pre>64</pre></td><td><pre>128</pre></td></tr>
+<tr align="center" ><td>Solver 31</td><td><pre>126</pre></td><td><pre>64</pre></td><td><pre>128</pre></td></tr>
+<tr align="center" ><td>Solver 32</td><td><pre>116</pre></td><td><pre>64</pre></td><td><pre>128</pre></td></tr>
+<tr align="center" ><td>Solver 33</td><td><pre>108</pre></td><td><pre>64</pre></td><td><pre>128</pre></td></tr>
+<tr align="center" ><td>Solver 34</td><td><pre>124</pre></td><td><pre>64</pre></td><td><pre>128</pre></td></tr>
+<tr align="center" ><td>Solver 35</td><td><pre>126</pre></td><td><pre>64</pre></td><td><pre>128</pre></td></tr>
+<tr align="center" ><td>Solver 36</td><td><pre>117</pre></td><td><pre>64</pre></td><td><pre>128</pre></td></tr>
+<tr align="center" ><td>Solver 37</td><td><pre>112</pre></td><td><pre>64</pre></td><td><pre>128</pre></td></tr>
+<tr align="center" ><td>Solver 38</td><td><pre>115</pre></td><td><pre>64</pre></td><td><pre>128</pre></td></tr>
+<tr align="center" ><td>Solver 39</td><td><pre>120</pre></td><td><pre>64</pre></td><td><pre>128</pre></td></tr>
+<tr align="center" ><td>Solver 40</td><td><pre>120</pre></td><td><pre>64</pre></td><td><pre>128</pre></td></tr>
+<tr align="center" ><td>Solver 41</td><td><pre>119</pre></td><td><pre>64</pre></td><td><pre>128</pre></td></tr>
+<tr align="center" ><td>Solver 42</td><td><pre>122</pre></td><td><pre>64</pre></td><td><pre>128</pre></td></tr>
+<tr align="center" ><td>Solver 43</td><td><pre>119</pre></td><td><pre>64</pre></td><td><pre>128</pre></td></tr>
+<tr align="center" ><td>Solver 44</td><td><pre>122</pre></td><td><pre>64</pre></td><td><pre>128</pre></td></tr>
+<tr align="center" ><td>Solver 45</td><td><pre>117</pre></td><td><pre>64</pre></td><td><pre>128</pre></td></tr>
+<tr align="center" ><td>Solver 46</td><td><pre>118</pre></td><td><pre>64</pre></td><td><pre>128</pre></td></tr>
+<tr align="center" ><td>Solver 47</td><td><pre>109</pre></td><td><pre>64</pre></td><td><pre>128</pre></td></tr>
+<tr align="center" ><td>Solver 48</td><td><pre>122</pre></td><td><pre>64</pre></td><td><pre>128</pre></td></tr>
+<tr align="center" ><td>Solver 49</td><td><pre>122</pre></td><td><pre>64</pre></td><td><pre>128</pre></td></tr>
+<tr align="center" ><td>Solver 50</td><td><pre>127</pre></td><td><pre>64</pre></td><td><pre>128</pre></td></tr>
+<tr align="center" ><td>Solver 51</td><td><pre>127</pre></td><td><pre>64</pre></td><td><pre>128</pre></td></tr>
+<tr align="center" ><td>Solver 52</td><td><pre>123</pre></td><td><pre>64</pre></td><td><pre>128</pre></td></tr>
+<tr align="center" ><td>Solver 53</td><td><pre>121</pre></td><td><pre>64</pre></td><td><pre>128</pre></td></tr>
+<tr align="center" ><td>Solver 54</td><td><pre>124</pre></td><td><pre>64</pre></td><td><pre>128</pre></td></tr>
+<tr align="center" ><td>Solver 55</td><td><pre>122</pre></td><td><pre>64</pre></td><td><pre>128</pre></td></tr>
+<tr align="center" ><td>Solver 56</td><td><pre>124</pre></td><td><pre>64</pre></td><td><pre>128</pre></td></tr>
+<tr align="center" ><td>Solver 57</td><td><pre>121</pre></td><td><pre>64</pre></td><td><pre>128</pre></td></tr>
+<tr align="center" ><td>Solver 58</td><td><pre>119</pre></td><td><pre>64</pre></td><td><pre>128</pre></td></tr>
+<tr align="center" ><td>Solver 59</td><td><pre>125</pre></td><td><pre>64</pre></td><td><pre>128</pre></td></tr>
+<tr align="center" ><td>Solver 60</td><td><pre>122</pre></td><td><pre>64</pre></td><td><pre>128</pre></td></tr>
+<tr align="center" ><td>Solver 61</td><td><pre>128</pre></td><td><pre>64</pre></td><td><pre>128</pre></td></tr>
+<tr align="center" ><td>Solver 62</td><td><pre>124</pre></td><td><pre>64</pre></td><td><pre>128</pre></td></tr>
+<tr align="center" ><td>Solver 63</td><td><pre>117</pre></td><td><pre>64</pre></td><td><pre>128</pre></td></tr>
+<tr align="center" ><td>Solver 64</td><td><pre>120</pre></td><td><pre>64</pre></td><td><pre>128</pre></td></tr>
+<tr align="center" ><td>Solver 65</td><td><pre>124</pre></td><td><pre>64</pre></td><td><pre>128</pre></td></tr>
+<tr align="center" ><td>Solver 66</td><td><pre>122</pre></td><td><pre>64</pre></td><td><pre>128</pre></td></tr>
+<tr align="center" ><td>Solver 67</td><td><pre>123</pre></td><td><pre>64</pre></td><td><pre>128</pre></td></tr>
+<tr align="center" ><td>Solver 68</td><td><pre>113</pre></td><td><pre>64</pre></td><td><pre>128</pre></td></tr>
+<tr align="center" ><td>Solver 69</td><td><pre>115</pre></td><td><pre>64</pre></td><td><pre>128</pre></td></tr>
+<tr align="center" ><td>Solver 70</td><td><pre>126</pre></td><td><pre>64</pre></td><td><pre>128</pre></td></tr>
+<tr align="center" ><td>Solver 71</td><td><pre>121</pre></td><td><pre>64</pre></td><td><pre>128</pre></td></tr>
+<tr align="center" ><td>Solver 72</td><td><pre>120</pre></td><td><pre>64</pre></td><td><pre>128</pre></td></tr>
+<tr align="center" ><td>Solver 73</td><td><pre>117</pre></td><td><pre>64</pre></td><td><pre>128</pre></td></tr>
+<tr align="center" ><td>Solver 74</td><td><pre>125</pre></td><td><pre>64</pre></td><td><pre>128</pre></td></tr>
+<tr align="center" ><td>Solver 75</td><td><pre>119</pre></td><td><pre>64</pre></td><td><pre>128</pre></td></tr>
+<tr align="center" ><td>Solver 76</td><td><pre>117</pre></td><td><pre>64</pre></td><td><pre>128</pre></td></tr>
+<tr align="center" ><td>Solver 77</td><td><pre>123</pre></td><td><pre>64</pre></td><td><pre>128</pre></td></tr>
+<tr align="center" ><td>Solver 78</td><td><pre>121</pre></td><td><pre>64</pre></td><td><pre>128</pre></td></tr>
+<tr align="center" ><td>Solver 79</td><td><pre>125</pre></td><td><pre>64</pre></td><td><pre>128</pre></td></tr>
+<tr align="center" ><td>Solver 80</td><td><pre>122</pre></td><td><pre>64</pre></td><td><pre>128</pre></td></tr>
+<tr align="center" ><td>Solver 81</td><td><pre>125</pre></td><td><pre>64</pre></td><td><pre>128</pre></td></tr>
+<tr align="center" ><td>Solver 82</td><td><pre>107</pre></td><td><pre>64</pre></td><td><pre>128</pre></td></tr>
+<tr align="center" ><td>Solver 83</td><td><pre>121</pre></td><td><pre>64</pre></td><td><pre>128</pre></td></tr>
+<tr align="center" ><td>Solver 84</td><td><pre>117</pre></td><td><pre>64</pre></td><td><pre>128</pre></td></tr>
+<tr align="center" ><td>Solver 85</td><td><pre>122</pre></td><td><pre>64</pre></td><td><pre>128</pre></td></tr>
+<tr align="center" ><td>Solver 86</td><td><pre>116</pre></td><td><pre>64</pre></td><td><pre>128</pre></td></tr>
+<tr align="center" ><td>Solver 87</td><td><pre>126</pre></td><td><pre>64</pre></td><td><pre>128</pre></td></tr>
+<tr align="center" ><td>Solver 88</td><td><pre>121</pre></td><td><pre>64</pre></td><td><pre>128</pre></td></tr>
+<tr align="center" ><td>Solver 89</td><td><pre>120</pre></td><td><pre>64</pre></td><td><pre>128</pre></td></tr>
+<tr align="center" ><td>Solver 90</td><td><pre>121</pre></td><td><pre>64</pre></td><td><pre>128</pre></td></tr>
+<tr align="center" ><td>Solver 91</td><td><pre>124</pre></td><td><pre>64</pre></td><td><pre>128</pre></td></tr>
+<tr align="center" ><td>Solver 92</td><td><pre>117</pre></td><td><pre>64</pre></td><td><pre>128</pre></td></tr>
+<tr align="center" ><td>Solver 93</td><td><pre>115</pre></td><td><pre>64</pre></td><td><pre>128</pre></td></tr>
+<tr align="center" ><td>Solver 94</td><td><pre>124</pre></td><td><pre>64</pre></td><td><pre>128</pre></td></tr>
+<tr align="center" ><td>Solver 95</td><td><pre>124</pre></td><td><pre>64</pre></td><td><pre>128</pre></td></tr>
+<tr align="center" ><td>Solver 96</td><td><pre>123</pre></td><td><pre>64</pre></td><td><pre>128</pre></td></tr>
+<tr align="center" ><td>Solver 97</td><td><pre>113</pre></td><td><pre>64</pre></td><td><pre>128</pre></td></tr>
+<tr align="center" ><td>Solver 98</td><td><pre>114</pre></td><td><pre>64</pre></td><td><pre>128</pre></td></tr>
+<tr align="center" ><td>Solver 99</td><td><pre>120</pre></td><td><pre>64</pre></td><td><pre>128</pre></td></tr>
+
+</table>
+
+        <font face="verdana" color=#C8C8C8 size=2>
+        <hr>MuGA - Multiset Genetic Algorithm - Thesis (c)M@nso 2019  2020/01/15 06:47         
+    </body>
+</html>
+

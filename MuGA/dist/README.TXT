@@ -11,7 +11,7 @@ JAR files manifest file (MANIFEST.MF).
 To run the project from the command line, go to the dist folder and
 type the following:
 
-java -jar "MuGA_2019.jar" 
+java -jar "MuGA_20.jar" 
 
 To distribute this project, zip up the dist folder (including the lib folder)
 and distribute the ZIP file.

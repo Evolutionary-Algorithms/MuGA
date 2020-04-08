@@ -1,0 +1,24 @@
+solver name          = 0.5
+random seed          = 123
+number of runs       = 50
+
+solver type         = GA
+stop criteria       = MaxEvaluations 50000.0
+
+problem name        = real.multimodal.ModifiedRastrigin 2
+population type     = MultiPopulation 64
+
+selection           = NoSelection
+recombination       = real.MuAX 0.75 0.5
+mutation            = real.MuGauss -1.0 0.01
+replacement         = ClearingBest
+rescaling           = AdaptiveCeiling 2.0
+
+statistic           = BestFitness
+statistic           = Generation
+statistic           = PeekRatio
+statistic           = PeekSucessRate
+statistic           = PeeksFound
+statistic           = PeeksFuncsCall
+statistic           = FunctionCalls
+

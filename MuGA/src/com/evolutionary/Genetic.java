@@ -174,7 +174,7 @@ public class Genetic implements Serializable {
         return min + (max - min) * random.nextDouble();
     }
 
-    public static String VERSION = "MuGA (c) 2019 - ver 5.07";   
+    public static String VERSION = "MuGA - Multiset Genetic Algorithm  - (c) M@nso 2020";   
     
     //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
     private static final long serialVersionUID = 201510011056L;

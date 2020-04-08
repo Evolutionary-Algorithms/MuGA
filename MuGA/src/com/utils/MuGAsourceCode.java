@@ -65,7 +65,7 @@ public class MuGAsourceCode {
                 try {
                     imports.add(importToFile(line.substring(7)));//"import = 7 chras
                 } catch (Exception e) {
-                    System.err.println("Errer reading source Code " + line);
+                    //System.err.println("Error reading source Code " + line);
                 }
 
             } else if (line.startsWith("public class ")) {
@@ -83,7 +83,7 @@ public class MuGAsourceCode {
                     src.put(classImport, source);
                     getSource(src, getImports(source));
                 } catch (Exception ex) {                    
-                    System.err.println("Errer reading source Code " + classImport);
+                    //System.err.println("Errer reading source Code " + classImport);
                 }
             }
         }

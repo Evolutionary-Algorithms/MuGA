@@ -60,34 +60,39 @@ public class ExploreSolver extends javax.swing.JFrame {
 
     JFileChooser fileChooser;
 
+    public ExploreSolver(JFrame mainMenu) {
+        this.mainMenu = mainMenu;
+        try {
+            initMyComponents(FileSolver.loadDefaultSolver());
+        } catch (Exception e) {
+            initMyComponents(new GA());
+        }
+
+    }
+
     /**
      * Creates new form ExploreSolver
      */
-    public ExploreSolver(JFrame mainMenu) {
+    public ExploreSolver(JFrame mainMenu, EAsolver solver) {
+        this.mainMenu = mainMenu;
+        initMyComponents(solver);
+    }
+
+    public void initMyComponents(EAsolver solver) {
         setExtendedState(JFrame.MAXIMIZED_BOTH);
         initComponents();
         this.setLocationRelativeTo(mainMenu);
-        this.mainMenu = mainMenu;
         this.setTitle(Genetic.VERSION);
-        initMyComponents();
-    }
-
-    public void initMyComponents() {
         pleaseWait.setVisible(false);
         displayPop = new UIpopulation();
         pnPopulation.add(displayPop, BorderLayout.CENTER);
-        
-        try {
-            defaultSolver = FileSolver.loadDefaultSolver();
-        } catch (Exception ex) {          
-        }
-        setSolver(defaultSolver);        
+        setSolver(solver);
         initSolver();
 
         runningSolver.addListener(new EvolutionEventListener() {
             @Override
             public void onEvolutionChanges(EAsolver source) {
-                displayPop.updatePopulation(source.parents);
+                displayPop.updateSolverPopulation(source);
                 statsPanel.updateStats(source);
             }
 

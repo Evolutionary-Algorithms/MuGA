@@ -18,8 +18,6 @@ package com.evolutionary.operator.recombination;
 import com.evolutionary.operator.GeneticOperator;
 import com.evolutionary.population.Population;
 import com.evolutionary.problem.Individual;
-import com.evolutionary.problem.real.RealVector;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 

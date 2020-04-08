@@ -92,7 +92,7 @@ public class NUM extends Mutation {
     public String getInformation() {
         StringBuilder buf = new StringBuilder();
         buf.append(toString());
-        buf.append("\nNon Mutation Mutation");
+        buf.append("\nNon Uniform Mutation");
         buf.append("\nMichalewicz’s non-uniform mutation ");
         buf.append("\nPower of mutation <" + B + ">");
         return buf.toString();

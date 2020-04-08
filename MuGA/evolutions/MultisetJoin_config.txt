@@ -1,0 +1,25 @@
+solver name          = MultisetJoin
+random seed          = 123
+number of runs       = 10
+
+solver type         = GA
+stop criteria       = MaxEvaluations 80000.0
+
+problem name        = bits.nkLandscapes.NKSeq 128 3 128
+population type     = MultiPopulation 64
+
+selection           = MTournamentSelection 2.0 2
+recombination       = Uniform 0.75 0.5
+mutation            = FlipBit -1.0
+replacement         = MultisetJoinRND
+rescaling           = AdaptiveCeiling 1.0
+
+statistic           = BestFitness
+statistic           = CopiesOfMaxima
+statistic           = Generation
+statistic           = GeneticDiversity
+statistic           = Individuals
+statistic           = SucessRate
+statistic           = Time
+statistic           = FunctionCalls
+

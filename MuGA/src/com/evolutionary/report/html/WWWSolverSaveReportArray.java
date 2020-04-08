@@ -13,7 +13,6 @@
 //::                                                             (c) 2019    ::
 //:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 //////////////////////////////////////////////////////////////////////////////
-
 package com.evolutionary.report.html;
 
 import GUI.statistics.StatisticsChartSimulation;
@@ -38,6 +37,8 @@ import java.awt.Dimension;
 import java.io.BufferedOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
@@ -84,7 +85,7 @@ public class WWWSolverSaveReportArray {
                 new WWWSolverSaveReportArray(report).save(fileName, window);
             } else {
                 WWWSolverSaveReport.save(report, fileName, window);
-            }
+            }            
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -95,27 +96,45 @@ public class WWWSolverSaveReportArray {
     //:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
     //:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
     public static String saveStatisticElement(ReportSolverArray report, int index) throws Exception {
+        //CSV DATA by generation
+        Locale local = Locale.getDefault();
+        StringBuilder csvData = new StringBuilder();
+        csvData.append(report.stats.get(index).getTitle() + "\n\n");
+
         //Table Header
         ArrayList<StatisticElement[]> statsEvolutions = report.evolutionGeneration;
         StringBuilder txt = new StringBuilder();
         txt.append("<table  align=\"center\" style=\"width:100%\">\n"
-                + "<tr><th>Statistic</th>");
+                + "<tr><th>Generation</th>");
+        csvData.append("Generation ; ");
         for (String h : StatisticElement.header) {
             txt.append("<th>" + h + "</th>");
+            csvData.append(h + " ; ");
         }
         txt.append("</tr>\n");
+        csvData.append("\n");
         //table data
-        for (int i = statsEvolutions.size() - 1; i >= 0; i--) {
+        for (int i = 0; i < statsEvolutions.size(); i++) {
             txt.append("<tr> <td> " + i + "</td>");
+            csvData.append(i + " " + HTMLutils.CSV_COMMA);
             StatisticElement[] data = statsEvolutions.get(i);
             double[] values = data[index].getData();
             for (int k = 0; k < values.length; k++) {
+                csvData.append(String.format(local, " %f", values[k]) + " " + HTMLutils.CSV_COMMA);
                 txt.append("<td><pre>" + HTMLutils.getNumber(values[k], Locale.ENGLISH) + "</pre></td>");
             }
+            csvData.append("\n");
             txt.append("</tr>\n");
         }
 
         txt.append("</table>");
+        //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+        // WRITE CSV FILE 
+        File path = new File(report.path);
+        String csvFile = path.getAbsolutePath() + "/" + report.solver.getSolverName()
+                + "_" + report.stats.get(index).getSimpleName() + "_generations.csv";
+        Files.write(Paths.get(csvFile), csvData.toString().getBytes());
+        //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
         return txt.toString();
 
     }
@@ -236,7 +255,7 @@ public class WWWSolverSaveReportArray {
         public Void doInBackground() {
             try {
                 publish("Starting report");
-                publish("Resizing evolution - " + ReportSolver.NUMBER_OF_STATS_EVOLUTION+ " elements");
+                publish("Resizing evolution - " + ReportSolver.NUMBER_OF_STATS_EVOLUTION + " elements");
                 report.redimStatisticsEvolution();
                 //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
                 //::::::::::::::::::::::::::::  B E G I N ::::::::::::::::::::::
@@ -285,7 +304,7 @@ public class WWWSolverSaveReportArray {
                 for (EAsolver solver : array.arrayOfSolvers) {
                     if (progressDialog != null) {
                         publish(solverName + " Save Evolution " + solver.getSolverName() + " of " + (array.arrayOfSolvers.length - 1));
-                        WWWSolverSaveReport.save(solver.report, path.getAbsolutePath() + "/" + solver.getSolverName() + "/", null);
+                        WWWSolverSaveReport.save(solver.report, path.getAbsolutePath() + "/" + solver.getSolverName() + "/" + solver.getSolverName(), null);
                     }
                     menuOfSolver.append("\n<tr><td><a href=\""
                             + solver.getSolverName() + "/index.html\" target=\""
@@ -302,7 +321,7 @@ public class WWWSolverSaveReportArray {
                 //::::::::::::::::::::::::::::  E N D !:::::::::::::::::::::::::
                 //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
                 path = new File(path.getAbsolutePath() + "/index.html");
-                //java.awt.Desktop.getDesktop().browse(path.toURI());
+                java.awt.Desktop.getDesktop().browse(path.toURI());
             } catch (Exception ex) {
                 publish(ex.getMessage());
             }

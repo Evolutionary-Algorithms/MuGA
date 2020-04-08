@@ -1,0 +1,22 @@
+solver name          = SGA-128_008
+random seed          = -3758321679654915806
+number of runs       = 1
+
+solver type         = GA
+stop criteria       = MaxGeneration 101
+
+problem name        = bits.OneMax 128
+population type     = SimplePopulation 128
+
+selection           = MTournamentSelection 1.0 2
+recombination       = Uniform 0.75 0.5
+mutation            = FlipBit -1.0
+replacement         = TournamentReplacement
+rescaling           = AdaptiveCeiling 1.5
+
+statistic           = Generation
+statistic           = Individuals
+statistic           = SucessRate
+statistic           = Time
+statistic           = FunctionCalls
+

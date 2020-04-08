@@ -98,7 +98,6 @@ public class RTS extends EAsolver {
                 return;
             }
         }
-
         //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
         //create a window to select most similar
         //get individuals list
@@ -110,8 +109,7 @@ public class RTS extends EAsolver {
         double tournamentSize = (tour.size() * windowSize);        
         //random individual
         Individual mostSimilar = tour.get(0); // first individual
-        double distance = descendant.distanceTo(mostSimilar);
-        
+        double distance = descendant.distanceTo(mostSimilar);        
         //probe random individuals
         for (int i = 1; i < tournamentSize; i++) { //compare to other individuals
             Individual pivot = tour.get(i);
@@ -125,16 +123,14 @@ public class RTS extends EAsolver {
             pop.removeGenome(mostSimilar);
             pop.addIndividual(descendant);
         }
-
     }
-
     //----------------------------------------------------------------------------------------------------------
     @Override
     public String getParameters() {
         return windowSize + "";
     }
 
-    /**
+   /**
      * update parameters of the operator
      *
      * @param params parameters separated by spaces

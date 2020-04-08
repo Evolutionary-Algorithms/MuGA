@@ -125,16 +125,16 @@ public abstract class RealVector extends Individual {
             setGenome(genome);
         }
         for (int i = 0; i < v.length; i++) {
-//            if (x[i] < minValue) {
-//                x[i] = maxValue - (minValue - x[i]);
-//                i--;
-//                continue;
-//            }
-//            if (x[i] > maxValue) {
-//                x[i] = minValue + (x[i] - maxValue);
-//                i--;
-//                continue;
-//            }
+            if (x[i] < minValue) {
+                x[i] = maxValue - (minValue - x[i]);
+                i--;
+                continue;
+            }
+            if (x[i] > maxValue) {
+                x[i] = minValue + (x[i] - maxValue);
+                i--;
+                continue;
+            }
 
             v[i] = x[i] < minValue ? minValue : x[i] > maxValue ? maxValue : x[i];
         }
@@ -292,9 +292,13 @@ public abstract class RealVector extends Individual {
     public String getProblemDefinition() {//------------------------------------------ get information
         // public String getInfo() {
         StringBuilder txt = new StringBuilder(super.getProblemDefinition());
-        txt.append("\nInterval     [ " + minValue);
+        txt.append(" \tInterval     [ " + minValue);
         txt.append(" , " + maxValue + " ]");
         return txt.toString();
+    }
+    
+    public double getFuncValue(double...x){
+        return evaluate(x);
     }
 
     //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::

@@ -32,7 +32,13 @@ public class SimplePopulation extends Population {
 
     protected ArrayList<Individual> simplePop = new ArrayList<>();
 
+    public SimplePopulation() {
+    }
+    public SimplePopulation(List<Individual> inds) {
+        simplePop = new ArrayList<>(inds);
+    }
 
+ 
     /**
      * ad one individual to the population
      *

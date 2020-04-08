@@ -40,6 +40,7 @@ import jv.viewer.PvDisplay;
  */
 public class Graphics3Dfunc extends DisplayPopulation {
 
+
     protected PgElementSet space = null;
     protected PvDisplay disp = null;
     Individual individual;
@@ -50,6 +51,7 @@ public class Graphics3Dfunc extends DisplayPopulation {
     protected double normz = 1;
     protected double normi = 1;
     protected double MIN_VALUE = 0;
+
 
     public String toString() {
         return "Display 3D";
@@ -109,19 +111,19 @@ public class Graphics3Dfunc extends DisplayPopulation {
         disp = new PvDisplay();
         this.removeAll();
         this.setLayout(new BorderLayout());
-        this.add((Component) disp, BorderLayout.CENTER);
+        this.add((Component) disp.getCanvas(), BorderLayout.CENTER);
         this.revalidate();
 
-        int DIM = 5;
+        int DIM = 0;
         space = new PgElementSet(3);
         // Allocate space for vertices.
         space.setNumVertices((numLines + DIM * 2) * (numLines + DIM * 2));
         // Compute the vertices.
         int ind = 0;
-        double xMin = getMin(individual);
-        double xMax = getMax(individual);
-        double yMin = getMin(individual);
-        double yMax = getMax(individual);
+        double xMin = getMin(individual,0);
+        double xMax = getMax(individual,0);
+        double yMin = getMin(individual,1);
+        double yMax = getMax(individual,1);
         double stepX = (xMax - xMin) / (numLines - 1);
         double stepy = (yMax - yMin) / (numLines - 1);
         double step = Math.max(stepX, stepy);
@@ -154,16 +156,16 @@ public class Graphics3Dfunc extends DisplayPopulation {
         space.showEdges(true);
     }
 
-    private double getMin(Individual ind) {
-        
+    private double getMin(Individual ind, int index) {
+
         if (ind instanceof RealVector) {
             return ((RealVector) ind).getMinValue();
         }
         return 0;
     }
 
-    private double getMax(Individual ind) {
-        
+    private double getMax(Individual ind, int index) {
+
         if (ind instanceof RealVector) {
             return ((RealVector) ind).getMaxValue();
         }
@@ -171,17 +173,17 @@ public class Graphics3Dfunc extends DisplayPopulation {
     }
 
     private void setValues(Individual ind, double[] values) {
-       
+
         if (ind instanceof RealVector) {
             ((RealVector) ind).setDoubleValues(values);
         }
     }
 
     public void computeNorms() {
-        double xMin = getMin(individual);
-        double xMax = getMax(individual);
-        double yMin = getMin(individual);
-        double yMax = getMax(individual);
+        double xMin = getMin(individual,0);
+        double xMax = getMax(individual,0);
+        double yMin = getMin(individual,1);
+        double yMax = getMax(individual,1);
         double stepX = (xMax - xMin) / (numLines - 1);
         double stepy = (yMax - yMin) / (numLines - 1);
         double zMin = Double.MAX_VALUE;

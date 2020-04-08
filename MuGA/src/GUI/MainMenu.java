@@ -17,14 +17,50 @@ package GUI;
 
 import GUI.research.ResearchMenu;
 import com.evolutionary.Genetic;
+import java.awt.Desktop;
 import java.awt.Dimension;
 import java.awt.Toolkit;
+import java.net.URISyntaxException;
+import java.net.URL;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
  * @author zulu
  */
 public class MainMenu extends javax.swing.JFrame {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String args[]) {
+        MainMenu menu = new MainMenu();
+//        if (args.length > 0) {
+//            try {
+//                ArrayList<EAsolver> lst = FileSimulation.loadSimulation(args[0]);
+//                if (lst.size() == 1) {
+//                    ExploreSolver guiSolver = new ExploreSolver(menu, lst.get(0));
+//                    java.awt.EventQueue.invokeLater(() -> {
+//                        guiSolver.setVisible(true);
+//                    });
+//                    return;
+//                } else {
+//                    RunSimulation guiSolver = new RunSimulation(menu, lst);
+//                    java.awt.EventQueue.invokeLater(() -> {
+//                        guiSolver.setVisible(true);
+//                    });
+//                    return;
+//                }
+//            } catch (Exception e) {
+//            }
+//
+//        }
+        java.awt.EventQueue.invokeLater(() -> {
+            menu.setVisible(true);
+        });
+
+    }
 
     /**
      * Creates new form MainMenu
@@ -51,17 +87,30 @@ public class MainMenu extends javax.swing.JFrame {
         jLabel14 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
-        btResearch = new javax.swing.JButton();
         btEvolve = new javax.swing.JButton();
         btCompare = new javax.swing.JButton();
         btExplore = new javax.swing.JButton();
+        btResearch = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
+        jPanel6 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jTextArea2 = new javax.swing.JTextArea();
         jLabel12 = new javax.swing.JLabel();
+        jPanel7 = new javax.swing.JPanel();
+        jPanel4 = new javax.swing.JPanel();
         jLabel13 = new javax.swing.JLabel();
-        jTextArea1 = new javax.swing.JTextArea();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        jPanel5 = new javax.swing.JPanel();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jPanel8 = new javax.swing.JPanel();
+        jLabel4 = new javax.swing.JLabel();
+        btGithub = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("PHD 2020");
@@ -75,17 +124,7 @@ public class MainMenu extends javax.swing.JFrame {
 
         jPanel3.setLayout(new java.awt.GridLayout(2, 2, 10, 10));
 
-        btResearch.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/icons/Research_128.png"))); // NOI18N
-        btResearch.setText("Research");
-        btResearch.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btResearch.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        btResearch.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btResearchActionPerformed(evt);
-            }
-        });
-        jPanel3.add(btResearch);
-
+        btEvolve.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         btEvolve.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/icons/DNA-128.png"))); // NOI18N
         btEvolve.setText("Evolve");
         btEvolve.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -97,8 +136,9 @@ public class MainMenu extends javax.swing.JFrame {
         });
         jPanel3.add(btEvolve);
 
+        btCompare.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         btCompare.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/icons/Run_128.png"))); // NOI18N
-        btCompare.setText("Run");
+        btCompare.setText("Explore");
         btCompare.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btCompare.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         btCompare.addActionListener(new java.awt.event.ActionListener() {
@@ -108,8 +148,9 @@ public class MainMenu extends javax.swing.JFrame {
         });
         jPanel3.add(btCompare);
 
+        btExplore.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         btExplore.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/icons/Charts-128.png"))); // NOI18N
-        btExplore.setText("Explore");
+        btExplore.setText("Compare");
         btExplore.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btExplore.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         btExplore.addActionListener(new java.awt.event.ActionListener() {
@@ -118,6 +159,18 @@ public class MainMenu extends javax.swing.JFrame {
             }
         });
         jPanel3.add(btExplore);
+
+        btResearch.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        btResearch.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/icons/Research_128.png"))); // NOI18N
+        btResearch.setText("Research");
+        btResearch.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btResearch.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btResearch.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btResearchActionPerformed(evt);
+            }
+        });
+        jPanel3.add(btResearch);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -128,16 +181,15 @@ public class MainMenu extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 700, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addContainerGap(14, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(208, 208, 208))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 700, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addContainerGap())))))
+                        .addGap(0, 206, Short.MAX_VALUE)
+                        .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(208, 208, 208))))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(23, 23, 23)
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 700, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -146,75 +198,102 @@ public class MainMenu extends javax.swing.JFrame {
                 .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel16)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 381, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(33, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         jTabbedPane1.addTab("MuGA", jPanel1);
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/icons/ipt.png"))); // NOI18N
+        jPanel6.setLayout(new java.awt.GridLayout(1, 0, 10, 0));
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/icons/estt_ipt_logo.png"))); // NOI18N
+        jPanel6.add(jLabel5);
+
+        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/icons/ciencias_ul.png"))); // NOI18N
+        jPanel6.add(jLabel12);
+
+        jPanel7.setLayout(new java.awt.GridLayout(1, 0, 10, 0));
+
+        jPanel4.setLayout(new java.awt.GridLayout(7, 1, 0, 5));
+
+        jLabel13.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel13.setText("António Manso");
+        jPanel4.add(jLabel13);
+
+        jLabel6.setText("Instituto Politécnico de Tomar");
+        jPanel4.add(jLabel6);
+
+        jLabel7.setText("Quinta do Contador . Estrada da Serra");
+        jPanel4.add(jLabel7);
+
+        jLabel3.setText("2300-313 . Tomar . Portugal");
+        jPanel4.add(jLabel3);
+
+        jLabel17.setText("man@ipt.pt");
+        jPanel4.add(jLabel17);
+
+        jPanel7.add(jPanel4);
+
+        jPanel5.setLayout(new java.awt.GridLayout(7, 1, 0, 5));
+
+        jLabel15.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel15.setText("Luis Correia");
+        jPanel5.add(jLabel15);
+
+        jLabel8.setText("Universidade de Lisboa");
+        jPanel5.add(jLabel8);
+
+        jLabel9.setText(" Campo Grande");
+        jPanel5.add(jLabel9);
+
+        jLabel10.setText("1749-016 Lisboa – Portugal");
+        jPanel5.add(jLabel10);
+
+        jLabel11.setText(" luis.correia@ciencias.ulisboa.pt");
+        jPanel5.add(jLabel11);
+
+        jPanel7.add(jPanel5);
+
+        jPanel8.setLayout(new java.awt.GridLayout(1, 0, 5, 0));
 
         jLabel4.setBackground(new java.awt.Color(0, 0, 0));
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/icons/BioISI_256.png"))); // NOI18N
+        jPanel8.add(jLabel4);
 
-        jTextArea2.setEditable(false);
-        jTextArea2.setBackground(new java.awt.Color(240, 240, 240));
-        jTextArea2.setColumns(20);
-        jTextArea2.setRows(5);
-        jTextArea2.setText("\nUniversidade de Lisboa, Campo Grande\n1749-016 Lisboa – Portugal\nLuis.Correia@di.fc.ul.pt\n");
-        jTextArea2.setAutoscrolls(false);
-        jTextArea2.setOpaque(false);
-        jTextArea2.setRequestFocusEnabled(false);
-
-        jLabel12.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel12.setText("Antonio Manso");
-
-        jLabel13.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel13.setText("Luis Correia");
-
-        jTextArea1.setEditable(false);
-        jTextArea1.setBackground(new java.awt.Color(240, 240, 240));
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jTextArea1.setText("\nInstituto Politecnico de Tomar\n2300-313 Tomar - Portugal \nmanso@ipt.pt\n");
-        jTextArea1.setAutoscrolls(false);
-        jTextArea1.setOpaque(false);
-        jTextArea1.setRequestFocusEnabled(false);
+        btGithub.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btGithub.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/icons/github.png"))); // NOI18N
+        btGithub.setText("https://github.com/Evolutionary-Algorithms");
+        btGithub.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btGithub.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btGithub.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btGithubActionPerformed(evt);
+            }
+        });
+        jPanel8.add(btGithub);
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(22, 22, 22)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextArea1, javax.swing.GroupLayout.DEFAULT_SIZE, 285, Short.MAX_VALUE)
-                    .addComponent(jLabel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(38, 38, 38)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(jLabel13, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jTextArea2, javax.swing.GroupLayout.DEFAULT_SIZE, 310, Short.MAX_VALUE))
-                .addContainerGap(65, Short.MAX_VALUE))
+            .addComponent(jPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, 704, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, 704, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(26, 26, 26)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextArea1, javax.swing.GroupLayout.DEFAULT_SIZE, 356, Short.MAX_VALUE)
-                    .addComponent(jTextArea2))
-                .addContainerGap())
+                .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0))
         );
 
         jTabbedPane1.addTab("About", jPanel2);
@@ -262,57 +341,48 @@ public class MainMenu extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_btResearchActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
+    private void btGithubActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btGithubActionPerformed
+        Desktop desktop = Desktop.isDesktopSupported() ? Desktop.getDesktop() : null;
+        if (desktop != null && desktop.isSupported(Desktop.Action.BROWSE)) {
+            try {
+                desktop.browse(new URL("https://github.com/Evolutionary-Algorithms").toURI());
+            } catch (Exception ex) {
+                Logger.getLogger(MainMenu.class.getName()).log(Level.SEVERE, null, ex);
             }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(MainMenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(MainMenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(MainMenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(MainMenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
 
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new MainMenu().setVisible(true);
-            }
-        });
-    }
+    }//GEN-LAST:event_btGithubActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btCompare;
     private javax.swing.JButton btEvolve;
     private javax.swing.JButton btExplore;
+    private javax.swing.JButton btGithub;
     private javax.swing.JButton btResearch;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanel7;
+    private javax.swing.JPanel jPanel8;
     private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextArea jTextArea2;
     // End of variables declaration//GEN-END:variables
 }

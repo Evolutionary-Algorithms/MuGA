@@ -79,36 +79,21 @@ public class RunSimulation extends javax.swing.JFrame {
     /**
      * Creates new form ExploreSolver
      */
-    public RunSimulation(JFrame mainMenu) {
-        setExtendedState(JFrame.MAXIMIZED_BOTH);
-        initComponents();
-        this.setLocationRelativeTo(mainMenu);
-        this.mainMenu = mainMenu;
-        this.setTitle(Genetic.VERSION);
+    public RunSimulation(JFrame mainMenu, ArrayList<EAsolver> exp) {
+       for (EAsolver solver : exp) {
+                simulationEdit.solvers.add(solver);
+            }
         initMyComponents();
     }
-
-    public void initMyComponents() {
-        pleaseWait.setVisible(false);
-        fileChooserSimulation = new JFileChooser();
-        File file = new File(MyFile.getFullFileName(txtPathSimulation.getText()));
-        file.getParentFile().mkdirs();
-        txtPathSimulation.setText(file.toString());
-        fileChooserSimulation.setCurrentDirectory(file);
-        fileChooserSimulation.setSelectedFile(new File(txtPathSimulation.getText()));
-        fileChooserSimulation.setFileFilter(new FileNameExtensionFilter("Muga Simulation Files", FileSolver.FILE_EXTENSION_MUGA));
-        fileChooserSimulation.setMultiSelectionEnabled(true);
-
-        DefaultListModel<String> model = new DefaultListModel<>();
-        lstSolvers.setModel(model);
-        btRun.setVisible(false);
-
-        try {
-            EAExperiment exp = FileSolver.loadDefaultExperiment();
+  
+    public RunSimulation(JFrame mainMenu) {
+       try {
+           EAExperiment exp = FileSolver.loadDefaultExperiment();
             for (EAsolver solver : exp.solvers) {
                 simulationEdit.solvers.add(solver);
             }
         } catch (Exception e) {
+            
             EAsolver m = ExploreSolver.defaultSolver;
             m.parents = new MultiPopulation();
             //m.setSolverName("muGA");
@@ -122,6 +107,28 @@ public class RunSimulation extends javax.swing.JFrame {
             s.setSolverName("Population");
             simulationEdit.solvers.add(s);
         }
+        initMyComponents();
+    }
+
+    public void initMyComponents() {
+         setExtendedState(JFrame.MAXIMIZED_BOTH);
+        initComponents();
+        this.setLocationRelativeTo(mainMenu);
+        this.mainMenu = mainMenu;
+        this.setTitle(Genetic.VERSION);
+        pleaseWait.setVisible(false);
+        fileChooserSimulation = new JFileChooser();
+        File file = new File(MyFile.getFullFileName(txtPathSimulation.getText()));
+        file.getParentFile().mkdirs();
+        txtPathSimulation.setText(file.toString());
+        fileChooserSimulation.setCurrentDirectory(file);
+        fileChooserSimulation.setSelectedFile(new File(txtPathSimulation.getText()));
+        fileChooserSimulation.setFileFilter(new FileNameExtensionFilter("Muga Simulation Files", FileSolver.FILE_EXTENSION_MUGA));
+        fileChooserSimulation.setMultiSelectionEnabled(true);
+
+        DefaultListModel<String> model = new DefaultListModel<>();
+        lstSolvers.setModel(model);
+        btRun.setVisible(false);
         //:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
         txtMultipleSolver.setText(simulationEdit.solvers.get(0).toString());
@@ -818,6 +825,8 @@ public class RunSimulation extends javax.swing.JFrame {
             try {
                 WwwExperimentReport.save(simulationRunning, file.getSelectedFile().getAbsolutePath(), this);
                 txtPathSimulation.setText(MyFile.getPath(file.getSelectedFile().getAbsolutePath()));
+                File index = new File(file.getSelectedFile().getParentFile(), "index.html");
+                java.awt.Desktop.getDesktop().browse(index.toURI());
             } catch (Exception ex) {
                 Logger.getLogger(RunSimulation.class.getName()).log(Level.SEVERE, null, ex);
             }

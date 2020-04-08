@@ -1,0 +1,32 @@
+solver name          = Crowding
+random seed          = 123
+number of runs       = 32
+
+solver type         = Crowding
+stop criteria       = MaxEvaluations 80000.0
+
+problem name        = bits.nkLandscapes.NKSeq 128 3 128
+population type     = MultiPopulation 64
+
+selection           = NoSelection
+recombination       = DefaultRecombination 0.75 0.5
+mutation            = DefaultMutation -1.0
+replacement         = NoReplacement
+rescaling           = AdaptiveCeiling 1.5
+
+statistic           = BestFitness
+statistic           = CopiesOfMaxima
+statistic           = FuncsCallsToOptimum
+statistic           = Generation
+statistic           = GeneticDiversity
+statistic           = Genotypes
+statistic           = Individuals
+statistic           = MaxCopies
+statistic           = NumMaximaPop
+statistic           = NumOptimalGenomesPop
+statistic           = NumOptimumsFound
+statistic           = SelectedGenotypes
+statistic           = SucessRate
+statistic           = Time
+statistic           = FunctionCalls
+

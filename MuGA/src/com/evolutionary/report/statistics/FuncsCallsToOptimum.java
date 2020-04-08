@@ -13,7 +13,6 @@
 //::                                                             (c) 2019    ::
 //:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 //////////////////////////////////////////////////////////////////////////////
-
 package com.evolutionary.report.statistics;
 
 import com.evolutionary.problem.Individual;
@@ -39,15 +38,14 @@ public class FuncsCallsToOptimum extends AbstractStatistics {
      */
     @Override
     public double execute(EAsolver s) {
-        double value =  s.report.getLastValue(this);
+        double value = s.report.getLastValue(this);
         Individual best = s.hallOfFame.iterator().next();
         if (best.isOptimum()) {
-            if( value == 0)
-                return s.numEvaluations;
-            else
-                return value;            
+            if (value == 0) {
+                value = s.numEvaluations;
+            }
         }
-        return 0;
+        return value;
     }
 
     @Override

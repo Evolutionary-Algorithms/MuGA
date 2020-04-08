@@ -18,7 +18,9 @@ package GUI;
 import GUI.DisplayProblem.DisplayPopulation;
 import GUI.utils.MuGASystem;
 import com.evolutionary.population.Population;
+import com.evolutionary.population.SimplePopulation;
 import com.evolutionary.problem.Individual;
+import com.evolutionary.problem.real.multimodal.MultiModalFunc;
 import com.evolutionary.solver.EAsolver;
 import java.awt.BorderLayout;
 import java.util.ArrayList;
@@ -71,15 +73,35 @@ public class UIpopulation extends javax.swing.JPanel {
         graphicsDisplay = DisplayPopulation.getGraphicsModel(myPopulation);
         lstGraphicsDisplay.setModel(graphicsDisplay);
         lstGraphicsDisplay.setSelectedIndex(0);
-        updatePopulation(pop);
+        tpDisplayPopStateChanged(null);
     }
 
     public DisplayPopulation getPopulationGraphics() {
         return (DisplayPopulation) lstGraphicsDisplay.getSelectedValues()[0];
     }
 
-    public synchronized void updatePopulation(Population pop) {
-        myPopulation = pop;
+    public synchronized void updateSolverPopulation(EAsolver solver) {
+        if (rbPeeks.isSelected()) {
+            myPopulation = new SimplePopulation();
+            if (solver.parents.getIndividual(0) instanceof MultiModalFunc) {
+                MultiModalFunc problem = (MultiModalFunc) solver.parents.getIndividual(0);
+                myPopulation = new SimplePopulation(problem.getPeeks(solver.parents.getGenomes()));
+            }
+        } else if (rbOptimums.isSelected()) {
+            myPopulation = new SimplePopulation();
+            List<Individual> pop = solver.parents.getGenomes();
+            for (Individual ind : pop) {
+                if (ind.isOptimum()) {
+                    myPopulation.addIndividual(ind);
+                }
+            }
+        } else if (rbHallOfFame.isSelected()) {
+            myPopulation = new SimplePopulation(solver.hallOfFame);
+        } else if (rbSelectedPopulation.isSelected()) {
+            myPopulation = solver.selected;
+        } else {
+            myPopulation = solver.parents;
+        }
         tpDisplayPopStateChanged(null);
     }
 
@@ -92,6 +114,7 @@ public class UIpopulation extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        populationTypeGroup = new javax.swing.ButtonGroup();
         tpDisplayPop = new javax.swing.JTabbedPane();
         spGenotype = new javax.swing.JScrollPane();
         txtPopulation = new javax.swing.JTextArea();
@@ -100,6 +123,13 @@ public class UIpopulation extends javax.swing.JPanel {
         spGraphics = new javax.swing.JPanel();
         lstGraphicsDisplay = new javax.swing.JList<>();
         pnPaintPopulation = new javax.swing.JPanel();
+        jPanel1 = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
+        rbMainPopulation = new javax.swing.JRadioButton();
+        rbSelectedPopulation = new javax.swing.JRadioButton();
+        rbHallOfFame = new javax.swing.JRadioButton();
+        rbOptimums = new javax.swing.JRadioButton();
+        rbPeeks = new javax.swing.JRadioButton();
         jScrollPane3 = new javax.swing.JScrollPane();
         txtProblemInfo = new javax.swing.JTextArea();
 
@@ -155,12 +185,64 @@ public class UIpopulation extends javax.swing.JPanel {
 
         tpDisplayPop.addTab("Graphics", spGraphics);
 
+        jPanel1.setLayout(new java.awt.BorderLayout());
+
+        populationTypeGroup.add(rbMainPopulation);
+        rbMainPopulation.setSelected(true);
+        rbMainPopulation.setText("Main Population");
+        rbMainPopulation.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rbMainPopulationActionPerformed(evt);
+            }
+        });
+        jPanel2.add(rbMainPopulation);
+
+        populationTypeGroup.add(rbSelectedPopulation);
+        rbSelectedPopulation.setText("Selected  Population");
+        rbSelectedPopulation.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rbSelectedPopulationActionPerformed(evt);
+            }
+        });
+        jPanel2.add(rbSelectedPopulation);
+
+        populationTypeGroup.add(rbHallOfFame);
+        rbHallOfFame.setText("Hall of Fame");
+        rbHallOfFame.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rbHallOfFameActionPerformed(evt);
+            }
+        });
+        jPanel2.add(rbHallOfFame);
+
+        populationTypeGroup.add(rbOptimums);
+        rbOptimums.setText("Optimums");
+        rbOptimums.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rbOptimumsActionPerformed(evt);
+            }
+        });
+        jPanel2.add(rbOptimums);
+
+        populationTypeGroup.add(rbPeeks);
+        rbPeeks.setText("Peeks");
+        rbPeeks.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rbPeeksActionPerformed(evt);
+            }
+        });
+        jPanel2.add(rbPeeks);
+
+        jPanel1.add(jPanel2, java.awt.BorderLayout.SOUTH);
+
         txtProblemInfo.setColumns(20);
         txtProblemInfo.setFont(new java.awt.Font("Courier New", 0, 14)); // NOI18N
         txtProblemInfo.setRows(5);
         jScrollPane3.setViewportView(txtProblemInfo);
 
-        tpDisplayPop.addTab("Information", jScrollPane3);
+        jPanel1.add(jScrollPane3, java.awt.BorderLayout.CENTER);
+
+        tpDisplayPop.addTab("Setup", jPanel1);
 
         add(tpDisplayPop, java.awt.BorderLayout.CENTER);
     }// </editor-fold>//GEN-END:initComponents
@@ -169,16 +251,16 @@ public class UIpopulation extends javax.swing.JPanel {
         if (myPopulation == null) {
             return;
         }
-        if (tpDisplayPop.getSelectedComponent()== spGenotype) {
+        if (tpDisplayPop.getSelectedComponent() == spGenotype) {
             txtPopulation.setText(getPopGenotypeString(myPopulation));
             txtPopulation.setCaretPosition(0);
-        } else if (tpDisplayPop.getSelectedComponent()== spPhenotype) {
+        } else if (tpDisplayPop.getSelectedComponent() == spPhenotype) {
             txtPhenotype.setText(getPopPhenotypeString(myPopulation));
             txtPhenotype.setCaretPosition(0);
-        } else if (tpDisplayPop.getSelectedComponent()== spGraphics) {
+        } else if (tpDisplayPop.getSelectedComponent() == spGraphics) {
             lstGraphicsDisplayValueChanged(null);
         } else {
-            txtProblemInfo.setText(myPopulation.getTemplate().getInformation());
+            txtProblemInfo.setText(solver.parents.getTemplate().getInformation());
             txtProblemInfo.setCaretPosition(0);
         }
     }//GEN-LAST:event_tpDisplayPopStateChanged
@@ -190,7 +272,7 @@ public class UIpopulation extends javax.swing.JPanel {
         //try to display 
         SwingUtilities.invokeLater(() -> {
             DisplayPopulation display = (DisplayPopulation) graphicsDisplay.get(lstGraphicsDisplay.getSelectedIndex());
-            display.setSolver(solver);
+            display.setSolver(solver, myPopulation);
             pnPaintPopulation.removeAll();
             pnPaintPopulation.add(display, BorderLayout.CENTER);
             //grPopulation.add(lstGraphicsDisplay, BorderLayout.NORTH);
@@ -204,6 +286,26 @@ public class UIpopulation extends javax.swing.JPanel {
     private void pnPaintPopulationMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnPaintPopulationMouseClicked
         lstGraphicsDisplayValueChanged(null);
     }//GEN-LAST:event_pnPaintPopulationMouseClicked
+
+    private void rbMainPopulationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbMainPopulationActionPerformed
+        updateSolverPopulation(solver);
+    }//GEN-LAST:event_rbMainPopulationActionPerformed
+
+    private void rbSelectedPopulationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbSelectedPopulationActionPerformed
+        updateSolverPopulation(solver);
+    }//GEN-LAST:event_rbSelectedPopulationActionPerformed
+
+    private void rbHallOfFameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbHallOfFameActionPerformed
+        updateSolverPopulation(solver);
+    }//GEN-LAST:event_rbHallOfFameActionPerformed
+
+    private void rbOptimumsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbOptimumsActionPerformed
+        updateSolverPopulation(solver);
+    }//GEN-LAST:event_rbOptimumsActionPerformed
+
+    private void rbPeeksActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbPeeksActionPerformed
+        updateSolverPopulation(solver);
+    }//GEN-LAST:event_rbPeeksActionPerformed
 
     public String getPopPhenotypeString(Population pop) {
 //        if (solver instanceof Islands) {
@@ -256,7 +358,7 @@ public class UIpopulation extends javax.swing.JPanel {
             return "Empty Population";
         }
         List<Individual> lst = pop.getGenomes();
-        Collections.sort(lst );
+        Collections.sort(lst);
         Collections.reverse(lst);
 
         StringBuilder txt = new StringBuilder(pop.getClass().getSimpleName() + " ");
@@ -270,9 +372,17 @@ public class UIpopulation extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JList<String> lstGraphicsDisplay;
     private javax.swing.JPanel pnPaintPopulation;
+    private javax.swing.ButtonGroup populationTypeGroup;
+    private javax.swing.JRadioButton rbHallOfFame;
+    private javax.swing.JRadioButton rbMainPopulation;
+    private javax.swing.JRadioButton rbOptimums;
+    private javax.swing.JRadioButton rbPeeks;
+    private javax.swing.JRadioButton rbSelectedPopulation;
     private javax.swing.JScrollPane spGenotype;
     private javax.swing.JPanel spGraphics;
     private javax.swing.JScrollPane spPhenotype;

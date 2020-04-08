@@ -68,7 +68,7 @@ public class MyNumber {
         StringBuilder number2 = new StringBuilder(String.format(Locale.US, "%f", value));
 
         String number = String.valueOf(value).toUpperCase();
-        if (number.length() < size && number.indexOf("E") < 0) {
+        if ( size > 5 && number.length() < size && number.indexOf("E") < 0) {
             return MyString.alignRight(number, size);
         } else {
             return DoubleExpToString(value, size);

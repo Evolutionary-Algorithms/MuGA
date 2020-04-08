@@ -30,7 +30,7 @@ public class Sphere extends RealVector {
     double optimum[] = {0};
 
     public Sphere() {
-        super(DEFAULT_SIZE, -1, 1, Optimization.MINIMIZE);
+        super(DEFAULT_SIZE, -3, 1, Optimization.MINIMIZE);
         isLogScale = true;
     }
      public Sphere(double []values, double min, double max) {
